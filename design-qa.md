@@ -1,36 +1,41 @@
 # Design QA
 
-**Findings**
-- No actionable P0/P1/P2 layout issue was visible in the final mobile capture. The leader section now uses a full-width portrait, readable full-width copy, a clear CTA, and a separate quote panel.
-- [P3] The portrait and service photography are temporary generated assets. Replace them with approved real photographs before publication.
+**Final result: passed**
 
-**Open Questions**
-- The portrait is illustrative and is not a likeness of Lyubov Kuznetsova.
-- The provided mobile screenshot shows the pre-adjustment two-column card. It motivated the mobile reflow; it is not a screenshot of the current result.
+No actionable P0/P1/P2 visual findings remain at the requested desktop, tablet, and mobile widths. The mobile leader card remains in the vertical layout from the prior feedback; the temporary portrait and page copy were left unchanged as requested.
 
-**Implementation Checklist**
-- [x] Restore the original peach “A” brand mark in the header from the old site asset.
-- [x] Reflow the leader section for mobile to avoid narrow text columns and a compressed quote.
-- [x] Check the menu, FAQ disclosure, and frontend-only form status in the browser.
-- [x] Check that the 344 px mobile viewport has no horizontal document overflow.
-- [x] Run lint and production build.
+## Source and rendered evidence
 
-**Fidelity surfaces**
-- **Fonts and typography:** serif display headings and sans-serif body copy remain distinct; the leader name, body copy, and CTA have comfortable mobile wrapping after the reflow.
-- **Spacing and layout:** mobile content is stacked with consistent full-width alignment; the image, copy, CTA, and quote no longer compete in narrow parallel columns.
-- **Colors and tokens:** the warm cream page, rust accents, and pale quote surface remain consistent with the supplied visual direction.
-- **Image quality and asset fidelity:** the header uses the original supplied mark; the portrait is a temporary generated photo and is visibly labeled for replacement.
-- **Copy and content:** leader text and temporary-image disclosure are readable; the form explicitly says it does not send data.
+- Source visual truth: [provided responsive design reference](C:\Users\986C~1\AppData\Local\Temp\codex-clipboard-ea92aebe-1b5a-44cb-9b54-1c66a768a7b2.png), 1536 × 1024 px composite. Its desktop, tablet, and mobile artboards represent 1440 px, 768 px, and 375 px CSS widths.
+- Desktop: [qa/desktop.png](qa/desktop.png), full-page PNG, 1440 × 3576 px; CSS viewport 1440 × 1000 px; device scale factor 1.
+- Tablet: [qa/tablet.png](qa/tablet.png), full-page PNG, 768 × 3734 px; CSS viewport 768 × 1000 px; device scale factor 1.
+- Mobile: [qa/mobile.png](qa/mobile.png), full-page PNG, 390 × 5454 px; CSS viewport 390 × 1000 px; device scale factor 1. Compared against the 375 px reference artboard with a 1.04 width normalization.
+- Captures were made from `http://127.0.0.1:5173/` using Playwright and the installed Chrome browser. Images were loaded and decoded before full-page capture; all eight page images reported loaded at all three widths.
+- The source composite and three full-page captures were opened together for comparison. Focused review covered the header and hero, service cards, process steps, about image/text split, and leader profile/quote. The source has no FAQ or form artwork to compare against; those sections were checked for responsive layout and usable controls.
 
-**Evidence**
-- Source visual truth: user-provided mobile screenshot `C:\Users\986C~1\AppData\Local\Temp\codex-clipboard-77b762cb-76f9-48f2-8af8-ecb108ad6ea7.png` (shown as 336 × 530 px in the conversation).
-- Rendered implementation: browser tab at `http://127.0.0.1:5173/#leader-title`, captured in the Codex in-app browser at 344 × 884 CSS px, device scale factor 1. The focused mobile card was inspected; its complete rendered capture is visible in the current Codex browser session but was not persisted as a project image.
-- State: mobile viewport, leader section and following FAQ visible; no modal or menu open.
-- Full-view comparison: not performed at matching viewport/crop. The supplied source and rendered capture have different dimensions and the rendered screenshot is not persisted for a normalized side-by-side comparison.
-- Focused region comparison: the current leader card was inspected in the browser. Source screenshot is the previous two-column arrangement; implementation now stacks the portrait, copy, CTA, and quote.
+## Required fidelity surfaces
 
-**Comparison history**
-- Initial mobile feedback identified cramped portrait/text/quote columns. Changed the mobile grid to a vertical card; increased mobile copy size and gave the quote its own full-width panel.
-- Final browser inspection showed the full-width card with no horizontal overflow at 344 px. No further P0/P1/P2 visual fixes were identified in that inspection.
+- **Fonts and typography:** Playfair Display headings and Inter UI/body text render with the intended hierarchy. At 390 px, the hero title, service names, leader name, FAQ questions, and controls wrap without clipping.
+- **Spacing and layout:** The desktop service cards and work steps use four columns; the tablet layout uses two columns where space requires it; mobile stacks services and the leader card. No horizontal overflow was found at 1440, 768, or 390 px (`scrollWidth` equals the viewport width for every capture).
+- **Colors and tokens:** Cream backgrounds, pale beige surfaces, dark brown text, rust actions, borders, and card radii remain consistent with the supplied palette.
+- **Image quality and asset fidelity:** The original brand mark is used in the header. All page images loaded and their aspect ratios remain intact. Photos are intentionally temporary and should be replaced with approved assets before publication; the temporary leader portrait was not changed.
+- **Copy and content:** Existing approved copy remains intact. The design reference includes “в Екатеринбурге” in the hero title and contact details that are not in the current approved content. Those differences were left as supplied; no contact information or claims were invented.
 
-final result: blocked — a normalized side-by-side comparison at matching viewport/crop could not be produced from the available browser capture.
+## Findings
+
+- No P0/P1/P2 visual mismatches remain in the inspected regions at the three requested widths.
+
+## P3 follow-up
+
+- Replace temporary generated photos, including the leader portrait, with approved original photography when available.
+- The hero title and header contact details differ from the reference because current approved content does not provide the city phrase or confirmed phone number. Update only after content is approved.
+- Chrome reports a 404 for `/favicon.ico`; this does not affect the page layout or captured screenshots.
+
+## Interactions and browser diagnostics
+
+- Mobile menu opens, its services link navigates and closes the menu, and the FAQ disclosure expands.
+- Form submit displays the existing notice that the frontend-only form does not send data.
+- No page-level JavaScript errors were reported. One missing `/favicon.ico` request returned 404; all eight page images loaded successfully.
+- A first full-page mobile capture omitted the below-fold lazy office image. The capture was repeated after all images had loaded and decoded; the final `qa/mobile.png` contains the office image. No code or visual changes were made for this capture artifact.
+
+final result: passed
