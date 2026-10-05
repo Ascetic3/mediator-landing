@@ -7,13 +7,15 @@
 html {
   min-width: 320px;
   scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
 }
 
 body,
 h1,
 h2,
 h3,
-p {
+p,
+figure {
   margin: 0;
 }
 
@@ -24,8 +26,19 @@ select {
   font: inherit;
 }
 
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
 img,
 svg {
   display: block;
   max-width: 100%;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
 }

@@ -1,0 +1,155 @@
+@use '../../styles/mixins' as *;
+
+.header {
+  position: relative;
+  z-index: 5;
+  border-bottom: 1px solid rgb(90 74 66 / 12%);
+  background: var(--color-background);
+}
+
+.inner {
+  display: flex;
+  min-height: 4.75rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.brand {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 0.65rem;
+  color: var(--color-text-primary);
+  line-height: 1;
+  text-decoration: none;
+}
+
+.brandMark {
+  width: 2.45rem;
+  height: 2.45rem;
+  flex: 0 0 auto;
+  object-fit: contain;
+}
+
+.brandText {
+  display: flex;
+  flex-direction: column;
+}
+
+.brandName {
+  font-size: 1.08rem;
+  font-weight: 500;
+  letter-spacing: 0.24em;
+}
+
+.brandCaption {
+  margin-top: 0.35rem;
+  color: var(--color-text-muted);
+  font-size: 0.47rem;
+  letter-spacing: 0.08em;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 2vw, 2rem);
+
+  a:not(.navCta) {
+    font-size: 0.69rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 150ms ease;
+
+    &:hover {
+      color: var(--color-primary);
+    }
+  }
+}
+
+.navCta {
+  min-height: 2.45rem;
+  padding-inline: 1rem;
+  font-size: 0.68rem;
+  white-space: nowrap;
+}
+
+.menuToggle {
+  display: none;
+  width: 2.75rem;
+  height: 2.75rem;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-control);
+  background: transparent;
+  cursor: pointer;
+
+  &:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+
+  svg {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .inner {
+    min-height: 4.4rem;
+  }
+
+  .menuToggle {
+    display: inline-flex;
+  }
+
+  .brandMark {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+
+  .nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    display: none;
+    align-items: stretch;
+    flex-direction: column;
+    gap: 0;
+    padding: 0.75rem var(--container-gutter) 1.25rem;
+    border-bottom: 1px solid var(--color-border);
+    background: var(--color-background);
+    box-shadow: var(--shadow-soft);
+
+    a:not(.navCta) {
+      padding-block: 0.85rem;
+      border-bottom: 1px solid rgb(90 74 66 / 10%);
+      font-size: 0.9rem;
+    }
+  }
+
+  .navOpen {
+    display: flex;
+  }
+
+  .navCta {
+    margin-top: 0.9rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .brand {
+    gap: 0.5rem;
+  }
+
+  .brandName {
+    font-size: 0.96rem;
+  }
+
+  .brandCaption {
+    font-size: 0.42rem;
+  }
+}

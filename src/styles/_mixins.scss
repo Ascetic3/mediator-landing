@@ -1,11 +1,21 @@
 @mixin container {
-  width: min(calc(100% - 2 * clamp(1.25rem, 5vw, 4rem)), var(--container-width));
+  width: min(calc(100% - 2 * var(--container-gutter)), var(--container-width));
   margin-inline: auto;
 }
 
 @mixin focus-ring {
   &:focus-visible {
     outline: 2px solid var(--color-primary);
-    outline-offset: 4px;
+    outline-offset: 3px;
   }
+}
+
+@mixin section-heading {
+  margin: 0;
+  color: var(--color-text-primary);
+  font-family: var(--font-serif);
+  font-size: clamp(1.65rem, 2.5vw, 2.45rem);
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
 }
