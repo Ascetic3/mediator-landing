@@ -1,0 +1,274 @@
+{
+  "viewports": [
+    {
+      "name": "desktop",
+      "width": 1440,
+      "height": 900,
+      "cards": 4,
+      "clickTargets": [
+        {
+          "card": "Банкротство под ключ",
+          "area": "image",
+          "opened": true
+        },
+        {
+          "card": "Банкротство под ключ",
+          "area": "copy",
+          "opened": true
+        },
+        {
+          "card": "Банкротство под ключ",
+          "area": "details",
+          "opened": true
+        },
+        {
+          "card": "Подготовка заявления и документов",
+          "area": "image",
+          "opened": true
+        },
+        {
+          "card": "Подготовка заявления и документов",
+          "area": "copy",
+          "opened": true
+        },
+        {
+          "card": "Подготовка заявления и документов",
+          "area": "details",
+          "opened": true
+        },
+        {
+          "card": "Реструктуризация и переговоры",
+          "area": "image",
+          "opened": true
+        },
+        {
+          "card": "Реструктуризация и переговоры",
+          "area": "copy",
+          "opened": true
+        },
+        {
+          "card": "Реструктуризация и переговоры",
+          "area": "details",
+          "opened": true
+        },
+        {
+          "card": "Мировые соглашения",
+          "area": "image",
+          "opened": true
+        },
+        {
+          "card": "Мировые соглашения",
+          "area": "copy",
+          "opened": true
+        },
+        {
+          "card": "Мировые соглашения",
+          "area": "details",
+          "opened": true
+        }
+      ],
+      "cursor": "pointer",
+      "focusOutline": {
+        "style": "solid",
+        "width": "2px",
+        "offset": "-4px"
+      },
+      "hoverBorder": "rgb(199, 90, 70)",
+      "hoverTransform": "matrix(1, 0, 0, 1, 0, -2)"
+    },
+    {
+      "name": "tablet",
+      "width": 768,
+      "height": 900,
+      "cards": 4,
+      "clickTargets": [
+        {
+          "card": "Банкротство под ключ",
+          "area": "image",
+          "opened": true
+        },
+        {
+          "card": "Банкротство под ключ",
+          "area": "copy",
+          "opened": true
+        },
+        {
+          "card": "Банкротство под ключ",
+          "area": "details",
+          "opened": true
+        },
+        {
+          "card": "Подготовка заявления и документов",
+          "area": "image",
+          "opened": true
+        },
+        {
+          "card": "Подготовка заявления и документов",
+          "area": "copy",
+          "opened": true
+        },
+        {
+          "card": "Подготовка заявления и документов",
+          "area": "details",
+          "opened": true
+        },
+        {
+          "card": "Реструктуризация и переговоры",
+          "area": "image",
+          "opened": true
+        },
+        {
+          "card": "Реструктуризация и переговоры",
+          "area": "copy",
+          "opened": true
+        },
+        {
+          "card": "Реструктуризация и переговоры",
+          "area": "details",
+          "opened": true
+        },
+        {
+          "card": "Мировые соглашения",
+          "area": "image",
+          "opened": true
+        },
+        {
+          "card": "Мировые соглашения",
+          "area": "copy",
+          "opened": true
+        },
+        {
+          "card": "Мировые соглашения",
+          "area": "details",
+          "opened": true
+        }
+      ],
+      "cursor": "pointer",
+      "focusOutline": {
+        "style": "solid",
+        "width": "2px",
+        "offset": "-4px"
+      },
+      "hoverBorder": "rgb(199, 90, 70)",
+      "hoverTransform": "matrix(1, 0, 0, 1, 0, -2)"
+    },
+    {
+      "name": "mobile",
+      "width": 390,
+      "height": 844,
+      "cards": 4,
+      "clickTargets": [
+        {
+          "card": "Банкротство под ключ",
+          "area": "image",
+          "opened": true
+        },
+        {
+          "card": "Банкротство под ключ",
+          "area": "copy",
+          "opened": true
+        },
+        {
+          "card": "Банкротство под ключ",
+          "area": "details",
+          "opened": true
+        },
+        {
+          "card": "Подготовка заявления и документов",
+          "area": "image",
+          "opened": true
+        },
+        {
+          "card": "Подготовка заявления и документов",
+          "area": "copy",
+          "opened": true
+        },
+        {
+          "card": "Подготовка заявления и документов",
+          "area": "details",
+          "opened": true
+        },
+        {
+          "card": "Реструктуризация и переговоры",
+          "area": "image",
+          "opened": true
+        },
+        {
+          "card": "Реструктуризация и переговоры",
+          "area": "copy",
+          "opened": true
+        },
+        {
+          "card": "Реструктуризация и переговоры",
+          "area": "details",
+          "opened": true
+        },
+        {
+          "card": "Мировые соглашения",
+          "area": "image",
+          "opened": true
+        },
+        {
+          "card": "Мировые соглашения",
+          "area": "copy",
+          "opened": true
+        },
+        {
+          "card": "Мировые соглашения",
+          "area": "details",
+          "opened": true
+        }
+      ],
+      "cursor": "pointer",
+      "focusOutline": {
+        "style": "solid",
+        "width": "2px",
+        "offset": "-4px"
+      },
+      "hoverBorder": "rgb(199, 90, 70)",
+      "hoverTransform": "matrix(1, 0, 0, 1, 0, -2)"
+    }
+  ],
+  "clicks": 36,
+  "keyboard": [
+    {
+      "viewport": "desktop",
+      "key": "Enter",
+      "opened": true,
+      "focusReturned": true
+    },
+    {
+      "viewport": "desktop",
+      "key": "Space",
+      "opened": true,
+      "focusReturned": true
+    },
+    {
+      "viewport": "tablet",
+      "key": "Enter",
+      "opened": true,
+      "focusReturned": true
+    },
+    {
+      "viewport": "tablet",
+      "key": "Space",
+      "opened": true,
+      "focusReturned": true
+    },
+    {
+      "viewport": "mobile",
+      "key": "Enter",
+      "opened": true,
+      "focusReturned": true
+    },
+    {
+      "viewport": "mobile",
+      "key": "Space",
+      "opened": true,
+      "focusReturned": true
+    }
+  ],
+  "focusReturns": 36,
+  "nestedControls": [],
+  "errors": []
+}

@@ -43,19 +43,21 @@ function Services() {
               <div className={styles.cardBody}>
                 <h3>{service.title}</h3>
                 <p>{service.description}</p>
-                <button
-                  className={styles.cardLink}
-                  type="button"
-                  aria-haspopup="dialog"
-                  aria-label={`Подробнее об услуге: ${service.title}`}
-                  onClick={(event) => {
-                    returnFocusRef.current = event.currentTarget
-                    setActiveService(service)
-                  }}
-                >
-                  Подробнее <ArrowRight size={15} aria-hidden="true" />
-                </button>
               </div>
+              <button
+                className={styles.cardAction}
+                type="button"
+                aria-haspopup="dialog"
+                aria-label={`Подробнее об услуге: ${service.title}`}
+                onClick={(event) => {
+                  returnFocusRef.current = event.currentTarget
+                  setActiveService(service)
+                }}
+              >
+                <span className={styles.cardLink}>
+                  Подробнее <ArrowRight size={15} aria-hidden="true" />
+                </span>
+              </button>
             </article>
           )
         })}

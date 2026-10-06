@@ -115,3 +115,14 @@ final result: passed
 - **P3 follow-up:** none identified for this section/modal.
 
 final result: passed
+
+## Service card interaction QA (2026-10-06)
+
+**Final result: passed** — the full card works as one keyboard-accessible control; no layout or content regressions found.
+
+- **Reference:** supplied responsive board, [codex-clipboard-ea92aebe-1b5a-44cb-9b54-1c66a768a7b2.png](C:\Users\Адм\AppData\Local\Temp\codex-clipboard-ea92aebe-1b5a-44cb-9b54-1c66a768a7b2.png), 1536 × 1024 px. **Rendered implementation:** `http://127.0.0.1:5173/`, device scale factor 1. Viewports: 1440 × 900, 768 × 900, 390 × 844 CSS px. Focused section screenshots: [desktop](qa/services-interaction-section-desktop.png), 1320 × 612; [tablet](qa/services-interaction-section-tablet.png), 704 × 929; [mobile](qa/services-interaction-section-mobile.png), 350 × 1467. Full viewport screenshots with keyboard focus: [desktop](qa/services-interaction-desktop.png), [tablet](qa/services-interaction-tablet.png), [mobile](qa/services-interaction-mobile.png). Normalized side-by-side reference comparisons: [desktop](qa/services-card-compare-desktop.png), [tablet](qa/services-card-compare-tablet.png), [mobile](qa/services-card-compare-mobile.png).
+- **Implementation:** one native button overlays each card and contains the visible “Подробнее →” label, so clicks anywhere on the card open its own modal without nested interactive elements. Existing service text, images, grid, and modal content are unchanged. Hover keeps the subtle terracotta border and 2 px lift; keyboard focus has a visible 2 px outline.
+- **Interaction checks:** 36 pointer clicks across image, copy, and action areas (four cards × three widths × three areas) opened the correct modal. Enter and Space each opened it at all three widths. Closing by X returned focus to the exact initiating card for all 36 pointer opens and all 6 keyboard opens. Exactly one button/link was present per card. Cursor was `pointer`; measured hover border was `rgb(199, 90, 70)` with `translateY(-2px)`. No horizontal overflow and no page JavaScript errors.
+- **Findings:** none at P0/P1/P2. **P3:** none.
+
+final result: passed
