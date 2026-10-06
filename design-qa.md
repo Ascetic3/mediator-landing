@@ -126,3 +126,18 @@ final result: passed
 - **Findings:** none at P0/P1/P2. **P3:** none.
 
 final result: passed
+
+## About agency section and popup QA (2026-10-07)
+
+**Final result: passed** — no actionable P0/P1/P2 issues remain in the About block or popup.
+
+- **Visual source:** supplied responsive board [codex-clipboard-ea92aebe-1b5a-44cb-9b54-1c66a768a7b2.png](C:\Users\Адм\AppData\Local\Temp\codex-clipboard-ea92aebe-1b5a-44cb-9b54-1c66a768a7b2.png), 1536 × 1024 px. Desktop/tablet focused comparisons: [desktop](qa/about-comparison-desktop.png), [tablet](qa/about-comparison-tablet.png). The mobile artboard does not show the About block, so mobile was checked against the requested responsive behavior and overflow criteria rather than an absent source crop.
+- **Implementation captures:** section [desktop](qa/about-block-desktop.png), 1440 × 498 px at 1440 × 1000 CSS px; [tablet](qa/about-block-tablet.png), 768 × 507 px at 768 × 1000 CSS px; [mobile](qa/about-block-mobile.png), 390 × 658 px at 390 × 844 CSS px. Popup viewport captures: [desktop](qa/about-popup-desktop.png), [tablet](qa/about-popup-tablet.png), [mobile](qa/about-popup-mobile.png). All are browser-rendered at device scale factor 1 from `http://127.0.0.1:5173/`.
+- **Visual review:** the existing warm surface, two-column desktop/tablet composition, serif heading and right-side image remain. The image asset/import is unchanged. Mobile keeps the copy above the image. The longer supplied copy naturally makes the section taller than the older reference copy; the layout remains readable and unclipped. The popup follows the cream/terracotta palette, thin borders, restrained shadow, serif title, and responsive inner content area. The popup has no separate pictured state in the source board; it was reviewed against the user-provided modal specification.
+- **Content and behavior:** exact requested block and popup copy was checked. Popup title/intro, all three directions, “Как работаем”, X, Escape, overlay, `role=dialog`, `aria-modal`, labelled title, body scroll lock, root inert state, and focus restoration were verified. CTA closes the popup, smoothly scrolls to the form, and focuses the visible name field at all three widths. Popup bounds: 768 × 661 px desktop, 728 × 631 px tablet, and 374 × 724 px mobile; no horizontal overflow. No page JavaScript errors or failed non-favicon HTTP requests.
+- **QA iteration:** first CTA check found that focus was applied before smooth scrolling brought the form into view. Focus is now deferred until the name field enters the viewport. Post-fix verification confirms the focused field is visible at 1440, 768, and 390 px.
+- **Required fidelity surfaces:** Playfair/Inter hierarchy, spacing and two-column layout, cream/terracotta tokens, unchanged office image, exact copy, and all requested responsive/modal states were checked. **P3:** none.
+
+final result: passed
+
+- **Follow-up visual polish:** following the supplied screenshot review, increased the gap between the final paragraph and the About button. Refreshed all three section captures and reran desktop/tablet/mobile layout, popup, close, focus-return, and form CTA checks; no P0/P1/P2 issues or horizontal overflow.
