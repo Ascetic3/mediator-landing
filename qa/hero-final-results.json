@@ -1,0 +1,261 @@
+{
+  "viewports": [
+    {
+      "name": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "scrollWidth": 1440,
+      "hero": {
+        "x": 0,
+        "y": 77,
+        "width": 1440,
+        "height": 563.1875,
+        "right": 1440,
+        "bottom": 640.1875
+      },
+      "copy": {
+        "x": 60,
+        "y": 102.59375,
+        "width": 660,
+        "height": 512,
+        "right": 720,
+        "bottom": 614.59375
+      },
+      "h1": {
+        "text": "Банкротство физических лиц",
+        "box": {
+          "x": 116,
+          "y": 244.84375,
+          "width": 548,
+          "height": 125.4375,
+          "right": 664,
+          "bottom": 370.28125
+        },
+        "fontSize": "63.36px",
+        "lineHeight": "62.7264px",
+        "lines": [
+          {
+            "x": 116,
+            "y": 232.84375,
+            "width": 360.90625,
+            "height": 85
+          },
+          {
+            "x": 116,
+            "y": 295.5625,
+            "width": 464.5,
+            "height": 85
+          }
+        ]
+      },
+      "description": "Помогаем разобраться в финансовой ситуации и сопровождаем процедуру на всех этапах.",
+      "actions": [
+        {
+          "text": "Оставить заявку",
+          "x": 116,
+          "y": 458.09375,
+          "width": 173.3125,
+          "height": 44.796875,
+          "right": 289.3125,
+          "bottom": 502.890625
+        },
+        {
+          "text": "Бесплатная консультация",
+          "x": 300.5,
+          "y": 458.09375,
+          "width": 206.890625,
+          "height": 44.796875,
+          "right": 507.390625,
+          "bottom": 502.890625
+        }
+      ],
+      "image": {
+        "x": 720,
+        "y": 102.59375,
+        "width": 660,
+        "height": 512,
+        "right": 1380,
+        "bottom": 614.59375,
+        "src": "http://127.0.0.1:5173/hero-agency-consultation.png",
+        "naturalWidth": 1448,
+        "naturalHeight": 1086,
+        "objectPosition": "68% 50%"
+      }
+    },
+    {
+      "name": "tablet",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "scrollWidth": 768,
+      "hero": {
+        "x": 0,
+        "y": 71.390625,
+        "width": 768,
+        "height": 416,
+        "right": 768,
+        "bottom": 487.390625
+      },
+      "copy": {
+        "x": 32.25,
+        "y": 87.390625,
+        "width": 351.734375,
+        "height": 384,
+        "right": 383.984375,
+        "bottom": 471.390625
+      },
+      "h1": {
+        "text": "Банкротство физических лиц",
+        "box": {
+          "x": 62.96875,
+          "y": 165.875,
+          "width": 290.296875,
+          "height": 69.6875,
+          "right": 353.265625,
+          "bottom": 235.5625
+        },
+        "fontSize": "35.2px",
+        "lineHeight": "34.848px",
+        "lines": [
+          {
+            "x": 62.96875,
+            "y": 158.875,
+            "width": 200.5,
+            "height": 47
+          },
+          {
+            "x": 62.96875,
+            "y": 193.71875,
+            "width": 258.0625,
+            "height": 47
+          }
+        ]
+      },
+      "description": "Помогаем разобраться в финансовой ситуации и сопровождаем процедуру на всех этапах.",
+      "actions": [
+        {
+          "text": "Оставить заявку",
+          "x": 62.96875,
+          "y": 337.234375,
+          "width": 173.3125,
+          "height": 44.796875,
+          "right": 236.28125,
+          "bottom": 382.03125
+        },
+        {
+          "text": "Бесплатная консультация",
+          "x": 62.96875,
+          "y": 393.21875,
+          "width": 206.890625,
+          "height": 44.796875,
+          "right": 269.859375,
+          "bottom": 438.015625
+        }
+      ],
+      "image": {
+        "x": 383.984375,
+        "y": 87.390625,
+        "width": 351.75,
+        "height": 384,
+        "right": 735.734375,
+        "bottom": 471.390625,
+        "src": "http://127.0.0.1:5173/hero-agency-consultation.png",
+        "naturalWidth": 1448,
+        "naturalHeight": 1086,
+        "objectPosition": "68% 50%"
+      }
+    },
+    {
+      "name": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "scrollWidth": 390,
+      "hero": {
+        "x": 0,
+        "y": 71.390625,
+        "width": 390,
+        "height": 589.328125,
+        "right": 390,
+        "bottom": 660.71875
+      },
+      "copy": {
+        "x": 0,
+        "y": 71.390625,
+        "width": 390,
+        "height": 316.328125,
+        "right": 390,
+        "bottom": 387.71875
+      },
+      "h1": {
+        "text": "Банкротство физических лиц",
+        "box": {
+          "x": 20,
+          "y": 125.9375,
+          "width": 244.640625,
+          "height": 68.9375,
+          "right": 264.640625,
+          "bottom": 194.875
+        },
+        "fontSize": "33.15px",
+        "lineHeight": "34.476px",
+        "lines": [
+          {
+            "x": 20,
+            "y": 120.9375,
+            "width": 188.828125,
+            "height": 44
+          },
+          {
+            "x": 20,
+            "y": 155.40625,
+            "width": 243.03125,
+            "height": 44
+          }
+        ]
+      },
+      "description": "Помогаем разобраться в финансовой ситуации и сопровождаем процедуру на всех этапах.",
+      "actions": [
+        {
+          "text": "Оставить заявку",
+          "x": 20,
+          "y": 265.328125,
+          "width": 173.3125,
+          "height": 44.796875,
+          "right": 193.3125,
+          "bottom": 310.125
+        },
+        {
+          "text": "Бесплатная консультация",
+          "x": 20,
+          "y": 318.921875,
+          "width": 206.890625,
+          "height": 44.796875,
+          "right": 226.890625,
+          "bottom": 363.71875
+        }
+      ],
+      "image": {
+        "x": 0,
+        "y": 387.71875,
+        "width": 390,
+        "height": 273,
+        "right": 390,
+        "bottom": 660.71875,
+        "src": "http://127.0.0.1:5173/hero-agency-consultation.png",
+        "naturalWidth": 1448,
+        "naturalHeight": 1086,
+        "objectPosition": "64% 44%"
+      }
+    }
+  ],
+  "pageErrors": [],
+  "consoleErrors": [
+    "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  ],
+  "httpErrors": []
+}

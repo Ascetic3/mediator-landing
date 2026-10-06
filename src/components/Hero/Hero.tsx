@@ -6,10 +6,10 @@ function Hero() {
     <section className={styles.hero} aria-labelledby="hero-title">
       <div className={`container ${styles.grid}`}>
         <div className={styles.copy}>
-          <p className="eyebrow">Законно. Понятно. Надёжно.</p>
+          <p className="eyebrow">Агентство правовой помощи «Медиатор»</p>
           <h1 id="hero-title">Банкротство физических лиц</h1>
           <p className={styles.description}>
-            Помогаем разобраться в финансовой ситуации и пройти процедуру с последовательным сопровождением.
+            Помогаем разобраться в финансовой ситуации и сопровождаем процедуру на всех этапах.
           </p>
           <div className={styles.actions}>
             <a className="button" href="#contact">

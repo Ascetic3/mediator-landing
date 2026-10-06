@@ -55,6 +55,23 @@ No actionable P0/P1/P2 visual findings remain at the requested desktop, tablet, 
 
 final result: passed
 
+## Hero final polish QA (2026-10-06)
+
+**Final result: passed** — no actionable P0/P1/P2 findings remain in the hero.
+
+- Source visual truth: the user-selected image asset, unchanged at 1448 × 1086 px (`public/hero-agency-consultation.png`), paired with the exact copy and constraints in the latest request. There is no new full-layout mockup for these text edits, so copy/layout checks use the requested text and existing hero composition as their source.
+- Browser-rendered evidence is a hero-section screenshot in the initial home state, device scale factor 1: [desktop](qa/hero-final-desktop.png), 1440 × 564 px at 1440 × 1000 CSS px; [tablet](qa/hero-final-tablet.png), 768 × 417 px at 768 × 1000 CSS px; [mobile](qa/hero-final-mobile.png), 390 × 590 px at 390 × 844 CSS px.
+- Source and implementation were opened together in these same-height comparisons: [desktop](qa/hero-final-comparison-desktop.png), [tablet](qa/hero-final-comparison-tablet.png), and [mobile](qa/hero-final-comparison-mobile.png). The source image was proportionally scaled for the comparison only; the implementation screenshots remain at native capture dimensions.
+- Typography/content: the eyebrow now reads “Агентство правовой помощи «Медиатор»” in the existing small uppercase style. H1 remains “Банкротство физических лиц”; its desktop size is 63.36 px, down about 6% from the prior 68 px maximum. It wraps to two lines at each requested width without clipping. The subtitle matches the requested sentence, and both CTA links remain present and legible.
+- Layout/image: the text grid track was widened slightly to 50/50; the unchanged hero asset is a standard `<img>` using the existing `object-fit: cover` and positions. At tablet and mobile, the crop retains the laptop, desk, notebook, and folder. Desktop/tablet/mobile `scrollWidth` matches 1440/768/390 respectively; no horizontal overflow. Color palette, surfaces, image quality, and spacing remain consistent with the existing section.
+- No focused crop or fix iteration was needed: the full hero captures make the copy, CTA, and image crop clear at these sizes. Browser diagnostics recorded no page errors; one generic console resource 404 remains unrelated to this section.
+
+**Findings:** No P0/P1/P2.
+
+**Follow-up polish (P3):** At 768 px the long eyebrow wraps onto two lines. It remains small, legible, and secondary to the H1; left unchanged per scope.
+
+final result: passed
+
 ## Hero asset update QA (2026-10-06)
 
 **Final result: passed** — no actionable P0/P1/P2 findings in the hero at desktop, tablet, or mobile sizes.
