@@ -55,10 +55,8 @@
     }
   }
 
-  :global(.button) {
-    min-height: 2.4rem;
+  :global(.button--tertiary) {
     margin-top: 1.75rem;
-    padding: 0.6rem 1rem;
     font-size: 0.94rem;
   }
 }

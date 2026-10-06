@@ -92,7 +92,7 @@ function CredentialsGallery() {
     <>
       <button
         ref={triggerRef}
-        className={`button button--outline ${styles.trigger}`}
+        className={`button button--secondary ${styles.trigger}`}
         type="button"
         onClick={openGallery}
         aria-haspopup="dialog"

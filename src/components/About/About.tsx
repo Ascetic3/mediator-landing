@@ -1,4 +1,5 @@
 import { useCallback, useRef, useState } from 'react'
+import { ArrowRight } from 'lucide-react'
 import { aboutContent } from '../../data/siteContent'
 import SafeImage from '../SafeImage/SafeImage'
 import AboutModal from './AboutModal'
@@ -48,11 +49,11 @@ function About() {
           </ul>
           <button
             ref={returnFocusRef}
-            className="button button--outline"
+            className="button button--tertiary"
             type="button"
             onClick={() => setIsModalOpen(true)}
           >
-            {aboutContent.action}
+            {aboutContent.action} <ArrowRight size={16} aria-hidden="true" />
           </button>
         </div>
         <figure className={styles.imageWrap} data-motion="about-image">

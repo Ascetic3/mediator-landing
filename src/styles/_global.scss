@@ -119,14 +119,39 @@ textarea,
     }
   }
 
-  &--outline {
-    border-color: var(--color-primary);
-    background: transparent;
+  &--secondary {
+    border-color: var(--color-border);
+    background: var(--surface-base);
     color: var(--color-text-primary);
 
     &:hover {
-      background: var(--color-surface-warm);
+      transform: translateY(-1px);
+      border-color: color-mix(in srgb, var(--color-border) 68%, var(--color-text-secondary));
+      background: var(--surface-accent);
       color: var(--color-text-primary);
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+  }
+
+  &--tertiary {
+    min-height: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    color: var(--color-primary);
+    text-align: left;
+
+    &:hover {
+      background: transparent;
+      color: var(--color-primary-hover);
+    }
+
+    &:active {
+      background: transparent;
     }
   }
 

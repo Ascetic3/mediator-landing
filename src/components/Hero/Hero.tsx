@@ -16,7 +16,7 @@ function Hero() {
             <a className="button" href="#contact">
               Оставить заявку <ArrowRight size={16} aria-hidden="true" />
             </a>
-            <a className="button button--outline" href="#contact">Бесплатная консультация</a>
+            <a className="button button--secondary" href="#contact">Бесплатная консультация</a>
           </div>
         </div>
         <figure className={styles.imageWrap}>
