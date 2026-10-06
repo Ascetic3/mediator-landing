@@ -1,0 +1,61 @@
+{
+  "viewports": [
+    {
+      "width": 1440,
+      "overflow": false,
+      "sectionWidth": 1440
+    },
+    {
+      "width": 768,
+      "overflow": false,
+      "sectionWidth": 768
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "sectionWidth": 390
+    }
+  ],
+  "validation": {
+    "empty": "Проверьте номер телефона",
+    "incomplete": "Проверьте номер телефона",
+    "valid": "Форма подготовлена. Отправка пока не подключена.",
+    "consentLinkDoesNotSubmit": "Форма подготовлена. Отправка пока не подключена."
+  },
+  "phonePaste": {
+    "formatted": "+7 (999) 123-45-67",
+    "validErrorHidden": true
+  },
+  "ctaFlows": {
+    "hero": true,
+    "serviceModal": true,
+    "agencyModal": true
+  },
+  "overflow": {},
+  "payload": {
+    "keys": [
+      "name",
+      "phone",
+      "source",
+      "form",
+      "page",
+      "utm_source",
+      "utm_medium",
+      "utm_campaign",
+      "utm_content",
+      "utm_term"
+    ],
+    "defaults": [
+      "mediator_landing",
+      "consultation"
+    ],
+    "page": "/",
+    "utm": [
+      "one",
+      "two",
+      "three",
+      "four",
+      "five"
+    ]
+  }
+}
