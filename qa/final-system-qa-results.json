@@ -1,0 +1,104 @@
+{
+  "viewports": [
+    {
+      "width": 1440,
+      "height": 1000,
+      "horizontalOverflow": false,
+      "sticky": true,
+      "headerTopAfterScroll": 0,
+      "compactAfterScroll": true,
+      "servicesAnchorTop": 163,
+      "headerHeight": 61,
+      "contactAnchorClear": true,
+      "anchorTargetsMissing": []
+    },
+    {
+      "width": 768,
+      "height": 1000,
+      "horizontalOverflow": false,
+      "sticky": true,
+      "headerTopAfterScroll": 0,
+      "compactAfterScroll": true,
+      "servicesAnchorTop": 152,
+      "headerHeight": 59,
+      "contactAnchorClear": true,
+      "anchorTargetsMissing": []
+    },
+    {
+      "width": 390,
+      "height": 1000,
+      "horizontalOverflow": false,
+      "sticky": true,
+      "headerTopAfterScroll": 0,
+      "compactAfterScroll": true,
+      "servicesAnchorTop": 152,
+      "headerHeight": 59,
+      "contactAnchorClear": true,
+      "anchorTargetsMissing": []
+    }
+  ],
+  "navigation": {
+    "390": {
+      "mobileCtaVisible": true,
+      "opens": true,
+      "escapeCloses": true,
+      "linkNavigationCloses": true,
+      "destination": "#services",
+      "activeState": "location"
+    },
+    "768": {
+      "mobileCtaVisible": true,
+      "opens": true,
+      "escapeCloses": true,
+      "linkNavigationCloses": true,
+      "destination": "#services",
+      "activeState": "location"
+    },
+    "1440": {
+      "desktopLinks": [
+        "Услуги",
+        "Как мы работаем",
+        "О нас",
+        "Вопросы",
+        "Оставить заявку"
+      ]
+    }
+  },
+  "interactions": {
+    "faqSwitchesOneAtATime": true,
+    "faqRepeatedClickCloses": true,
+    "faqEnter": true,
+    "faqSpace": true,
+    "serviceModalOpens": true,
+    "serviceModalCtaFocusesForm": true,
+    "agencyModalOpens": true,
+    "agencyModalCtaFocusesForm": true,
+    "credentialsModalOpens": true,
+    "credentialsEscapeRestoresFocus": true
+  },
+  "accessibility": {
+    "navContactRemoved": true,
+    "legalPlaceholdersDisabled": 4,
+    "hashOnlyLinks": 0,
+    "navLinkSelection": "none",
+    "buttonSelection": "none",
+    "faqAnswerSelection": "auto",
+    "paragraphSelection": "auto",
+    "consentHasNoFakeLink": true
+  },
+  "reducedMotion": {
+    "observerClassAbsent": true,
+    "belowFoldOpacity": "1",
+    "revealTransition": "1e-05s"
+  },
+  "pageErrors": [],
+  "screenshots": [
+    "qa/final-desktop.png",
+    "qa/final-footer-desktop.png",
+    "qa/final-tablet.png",
+    "qa/final-footer-tablet.png",
+    "qa/final-mobile.png",
+    "qa/final-footer-mobile.png",
+    "qa/final-mobile-menu.png"
+  ]
+}

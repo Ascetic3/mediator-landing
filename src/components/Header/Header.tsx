@@ -1,23 +1,55 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Menu, X } from 'lucide-react'
 import mediatorMark from '../../assets/brand/mediator-mark.png'
+import { navigationLinks } from '../../data/navigation'
 import styles from './Header.module.scss'
-
-const links = [
-  { href: '#services', label: 'Услуги' },
-  { href: '#process', label: 'Как мы работаем' },
-  { href: '#about', label: 'О нас' },
-  { href: '#faq', label: 'Вопросы' },
-  { href: '#contact', label: 'Контакты' },
-]
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const [isCompact, setIsCompact] = useState(false)
+  const [activeLink, setActiveLink] = useState('')
 
   const closeMenu = () => setMenuOpen(false)
 
+  useEffect(() => {
+    function updateCompact() {
+      setIsCompact(window.scrollY > 24)
+      if (window.scrollY <= 80) setActiveLink('')
+    }
+
+    updateCompact()
+    window.addEventListener('scroll', updateCompact, { passive: true })
+    return () => window.removeEventListener('scroll', updateCompact)
+  }, [])
+
+  useEffect(() => {
+    if (!menuOpen) return
+
+    function closeOnEscape(event: KeyboardEvent) {
+      if (event.key === 'Escape') closeMenu()
+    }
+
+    document.addEventListener('keydown', closeOnEscape)
+    return () => document.removeEventListener('keydown', closeOnEscape)
+  }, [menuOpen])
+
+  useEffect(() => {
+    if (!('IntersectionObserver' in window)) return
+
+    const sections = navigationLinks
+      .map(({ href }) => document.querySelector<HTMLElement>(href))
+      .filter((section): section is HTMLElement => section !== null)
+    const observer = new IntersectionObserver((entries) => {
+      const current = entries.find((entry) => entry.isIntersecting)
+      if (current) setActiveLink(`#${current.target.id}`)
+    }, { rootMargin: '-20% 0px -70% 0px' })
+
+    sections.forEach((section) => observer.observe(section))
+    return () => observer.disconnect()
+  }, [])
+
   return (
-    <header className={styles.header}>
+    <header className={`${styles.header} ${isCompact ? styles.compact : ''}`}>
       <div className={`container ${styles.inner}`}>
         <a className={styles.brand} href="#main-content" onClick={closeMenu} aria-label="Медиатор — главная">
           <img className={styles.brandMark} src={mediatorMark} alt="" aria-hidden="true" />
@@ -28,8 +60,8 @@ function Header() {
         </a>
 
         <nav id="site-navigation" className={`${styles.nav} ${menuOpen ? styles.navOpen : ''}`} aria-label="Основная навигация">
-          {links.map((link) => (
-            <a key={link.href} href={link.href} onClick={closeMenu}>
+          {navigationLinks.map((link) => (
+            <a key={link.href} href={link.href} onClick={closeMenu} aria-current={activeLink === link.href ? 'location' : undefined}>
               {link.label}
             </a>
           ))}
@@ -37,6 +69,10 @@ function Header() {
             Оставить заявку
           </a>
         </nav>
+
+        <a className={`button ${styles.mobileCta}`} href="#contact" onClick={closeMenu}>
+          Оставить заявку
+        </a>
 
         <button
           className={styles.menuToggle}

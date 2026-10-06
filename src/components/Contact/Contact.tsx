@@ -1,6 +1,7 @@
 import { useRef, useState, type ChangeEvent, type FormEvent } from 'react'
 import { ArrowRight } from 'lucide-react'
 import { buildConsultationPayload, getRussianPhoneDigits, formatRussianPhone } from '../../utils/consultationPayload'
+import { legalUrls } from '../../config/legal'
 import styles from './Contact.module.scss'
 
 function Contact() {
@@ -69,7 +70,10 @@ function Contact() {
             Получить консультацию <ArrowRight size={16} aria-hidden="true" />
           </button>
           <p className={styles.consent}>
-            Нажимая кнопку, вы соглашаетесь на <a href="#" onClick={(event) => event.preventDefault()}>обработку персональных данных</a>.
+            Нажимая кнопку, вы соглашаетесь на{' '}
+            {legalUrls.personalDataConsentUrl
+              ? <a href={legalUrls.personalDataConsentUrl}>обработку персональных данных</a>
+              : <span>обработку персональных данных</span>}.
           </p>
           <p className={styles.formNotice} aria-live="polite" role="status">{notice}</p>
         </form>
