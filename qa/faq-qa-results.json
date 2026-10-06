@@ -1,0 +1,268 @@
+{
+  "viewports": [
+    {
+      "name": "desktop",
+      "width": 1440,
+      "height": 1000,
+      "geometry": {
+        "scrollWidth": 1440,
+        "sectionWidth": 1320,
+        "sectionHeight": 712,
+        "items": [
+          {
+            "width": 790,
+            "height": 59,
+            "cursor": "pointer",
+            "expanded": "true",
+            "controlsExist": true
+          },
+          {
+            "width": 790,
+            "height": 59,
+            "cursor": "pointer",
+            "expanded": "false",
+            "controlsExist": true
+          },
+          {
+            "width": 790,
+            "height": 59,
+            "cursor": "pointer",
+            "expanded": "false",
+            "controlsExist": true
+          },
+          {
+            "width": 790,
+            "height": 59,
+            "cursor": "pointer",
+            "expanded": "false",
+            "controlsExist": true
+          },
+          {
+            "width": 790,
+            "height": 59,
+            "cursor": "pointer",
+            "expanded": "false",
+            "controlsExist": true
+          },
+          {
+            "width": 790,
+            "height": 59,
+            "cursor": "pointer",
+            "expanded": "false",
+            "controlsExist": true
+          },
+          {
+            "width": 790,
+            "height": 59,
+            "cursor": "pointer",
+            "expanded": "false",
+            "controlsExist": true
+          },
+          {
+            "width": 790,
+            "height": 59,
+            "cursor": "pointer",
+            "expanded": "false",
+            "controlsExist": true
+          }
+        ]
+      },
+      "answerGeometry": {
+        "width": 790,
+        "scrollWidth": 790,
+        "textHeight": 56.6875
+      },
+      "focusState": {
+        "active": true,
+        "outlineStyle": "solid",
+        "outlineWidth": "2px"
+      }
+    },
+    {
+      "name": "tablet",
+      "width": 768,
+      "height": 1000,
+      "geometry": {
+        "scrollWidth": 768,
+        "sectionWidth": 703,
+        "sectionHeight": 672,
+        "items": [
+          {
+            "width": 421,
+            "height": 59,
+            "cursor": "pointer",
+            "expanded": "true",
+            "controlsExist": true
+          },
+          {
+            "width": 421,
+            "height": 59,
+            "cursor": "pointer",
+            "expanded": "false",
+            "controlsExist": true
+          },
+          {
+            "width": 421,
+            "height": 59,
+            "cursor": "pointer",
+            "expanded": "false",
+            "controlsExist": true
+          },
+          {
+            "width": 421,
+            "height": 59,
+            "cursor": "pointer",
+            "expanded": "false",
+            "controlsExist": true
+          },
+          {
+            "width": 421,
+            "height": 59,
+            "cursor": "pointer",
+            "expanded": "false",
+            "controlsExist": true
+          },
+          {
+            "width": 421,
+            "height": 59,
+            "cursor": "pointer",
+            "expanded": "false",
+            "controlsExist": true
+          },
+          {
+            "width": 421,
+            "height": 59,
+            "cursor": "pointer",
+            "expanded": "false",
+            "controlsExist": true
+          },
+          {
+            "width": 421,
+            "height": 59,
+            "cursor": "pointer",
+            "expanded": "false",
+            "controlsExist": true
+          }
+        ]
+      },
+      "answerGeometry": {
+        "width": 421,
+        "scrollWidth": 421,
+        "textHeight": 97.375
+      },
+      "focusState": {
+        "active": true,
+        "outlineStyle": "solid",
+        "outlineWidth": "2px"
+      }
+    },
+    {
+      "name": "mobile",
+      "width": 390,
+      "height": 844,
+      "geometry": {
+        "scrollWidth": 390,
+        "sectionWidth": 350,
+        "sectionHeight": 738,
+        "items": [
+          {
+            "width": 350,
+            "height": 59,
+            "cursor": "pointer",
+            "expanded": "true",
+            "controlsExist": true
+          },
+          {
+            "width": 350,
+            "height": 59,
+            "cursor": "pointer",
+            "expanded": "false",
+            "controlsExist": true
+          },
+          {
+            "width": 350,
+            "height": 59,
+            "cursor": "pointer",
+            "expanded": "false",
+            "controlsExist": true
+          },
+          {
+            "width": 350,
+            "height": 59,
+            "cursor": "pointer",
+            "expanded": "false",
+            "controlsExist": true
+          },
+          {
+            "width": 350,
+            "height": 59,
+            "cursor": "pointer",
+            "expanded": "false",
+            "controlsExist": true
+          },
+          {
+            "width": 350,
+            "height": 59,
+            "cursor": "pointer",
+            "expanded": "false",
+            "controlsExist": true
+          },
+          {
+            "width": 350,
+            "height": 59,
+            "cursor": "pointer",
+            "expanded": "false",
+            "controlsExist": true
+          },
+          {
+            "width": 350,
+            "height": 59,
+            "cursor": "pointer",
+            "expanded": "false",
+            "controlsExist": true
+          }
+        ]
+      },
+      "answerGeometry": {
+        "width": 350,
+        "scrollWidth": 350,
+        "textHeight": 117.71875
+      },
+      "focusState": {
+        "active": true,
+        "outlineStyle": "solid",
+        "outlineWidth": "2px"
+      }
+    }
+  ],
+  "interactionChecks": [
+    {
+      "viewport": "desktop",
+      "fullRowClick": true,
+      "repeatedClickCloses": true,
+      "oneAtATime": true,
+      "enter": true,
+      "space": true,
+      "visibleFocus": true
+    },
+    {
+      "viewport": "tablet",
+      "fullRowClick": true,
+      "repeatedClickCloses": true,
+      "oneAtATime": true,
+      "enter": true,
+      "space": true,
+      "visibleFocus": true
+    },
+    {
+      "viewport": "mobile",
+      "fullRowClick": true,
+      "repeatedClickCloses": true,
+      "oneAtATime": true,
+      "enter": true,
+      "space": true,
+      "visibleFocus": true
+    }
+  ],
+  "pageErrors": []
+}

@@ -151,3 +151,13 @@ final result: passed
 - Text column widened at desktop/tablet; image asset and copy remain unchanged. The three directions render as compact cream/terracotta text chips; mobile wraps them across two lines without crowding. The button remains prominent below them with a measured 28 px gap.
 - Horizontal overflow: none at all three widths. No page errors. Popup was not changed or included in this focused QA.
 - **P3:** none identified.
+
+## FAQ accordion expansion QA (2026-10-07)
+
+**Result: passed** — no actionable P0/P1/P2 or P3 findings in the FAQ section.
+
+- **Visual target:** user-provided FAQ reference [codex-clipboard-93929f63-b2db-4333-b075-ba474ac9e9ae.png](C:\Users\986C~1\AppData\Local\Temp\codex-clipboard-93929f63-b2db-4333-b075-ba474ac9e9ae.png), showing the existing two-column composition, serif section heading, sans-serif questions/answers, warm cream surface, and thin dividers. Its four-row content was intentionally extended to the requested eight.
+- **Current screenshots:** [desktop](qa/faq-desktop.png), [tablet](qa/faq-tablet.png), [mobile](qa/faq-mobile.png), captured from localhost at 1440 × 1000, 768 × 1000, and 390 × 844 CSS px (DPR 1); cropped section sizes are 1320 × 712, 704 × 672, and 350 × 738 px. Captures show the first item open.
+- **Fidelity:** typography hierarchy, two-column desktop/tablet layout, mobile stacked layout, palette, divider style, and icon treatment preserve the supplied design. No image assets are used in this section. All eight answers are concise and conditional where details depend on individual circumstances; no exact time, price, guaranteed result, or asset-retention claim was added.
+- **Interaction/accessibility:** full-width native buttons expose ria-expanded/ria-controls with unique IDs and labelled answer regions. Pointer cursor and 2 px focus outline verified. Repeated click closes; switching questions closes the previous one. Enter and Space pass at all three widths. Long answer wraps; document width matches each viewport, with no horizontal overflow or page errors.
+- **Evidence limits:** legacy FAQ details in the content inventory are marked VERIFY; the copy avoids relying on their specific legal outcomes or figures.

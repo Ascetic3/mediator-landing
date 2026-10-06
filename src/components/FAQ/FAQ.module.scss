@@ -17,37 +17,44 @@
 
 .item {
   border-bottom: 1px solid var(--color-border);
+}
 
-  summary {
-    display: flex;
-    min-height: 3.7rem;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-    color: var(--color-text-primary);
-    font-size: 0.88rem;
-    font-weight: 600;
-    list-style: none;
-    cursor: pointer;
+.question {
+  display: flex;
+  width: 100%;
+  min-height: 3.7rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--color-text-primary);
+  font-size: 0.88rem;
+  font-weight: 600;
+  line-height: 1.45;
+  text-align: left;
+  cursor: pointer;
 
-    &::-webkit-details-marker {
-      display: none;
-    }
-
-    &:focus-visible {
-      outline: 2px solid var(--color-primary);
-      outline-offset: -2px;
-    }
-
-    svg {
-      flex: 0 0 auto;
-      color: var(--color-primary);
-      transition: transform 150ms ease;
-    }
+  &:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: -2px;
   }
 
-  &[open] summary svg {
-    transform: rotate(180deg);
+  svg {
+    flex: 0 0 auto;
+    color: var(--color-primary);
+    transition: transform 150ms ease;
+  }
+}
+
+.item:has(.question[aria-expanded='true']) .question svg {
+  transform: rotate(180deg);
+}
+
+.answer {
+  &[hidden] {
+    display: none;
   }
 
   > p {
