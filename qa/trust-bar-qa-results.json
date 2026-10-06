@@ -1,0 +1,462 @@
+{
+  "views": [
+    {
+      "name": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "scrollWidth": 1440,
+      "section": {
+        "x": 0,
+        "y": 640.1875,
+        "width": 1440,
+        "height": 93.796875,
+        "right": 1440,
+        "bottom": 733.984375
+      },
+      "grid": "330px 330px 330px 330px",
+      "cards": [
+        {
+          "title": "Работаем по закону",
+          "description": "Рассматриваем предусмотренные законом варианты решения.",
+          "box": {
+            "x": 60,
+            "y": 640.1875,
+            "width": 330,
+            "height": 92.796875,
+            "right": 390,
+            "bottom": 732.984375
+          },
+          "titleBox": {
+            "x": 136.78125,
+            "y": 661.375,
+            "width": 231.625,
+            "height": 16.40625,
+            "right": 368.40625,
+            "bottom": 677.78125
+          },
+          "descriptionBox": {
+            "x": 136.78125,
+            "y": 681.78125,
+            "width": 231.625,
+            "height": 30,
+            "right": 368.40625,
+            "bottom": 711.78125
+          },
+          "titleScrollHeight": 16,
+          "titleClientHeight": 16,
+          "descriptionScrollHeight": 30,
+          "descriptionClientHeight": 30,
+          "icon": true
+        },
+        {
+          "title": "Разбираемся в ситуации",
+          "description": "Оцениваем обстоятельства и помогаем выбрать подходящий сценарий.",
+          "box": {
+            "x": 390,
+            "y": 640.1875,
+            "width": 330,
+            "height": 92.796875,
+            "right": 720,
+            "bottom": 732.984375
+          },
+          "titleBox": {
+            "x": 467.78125,
+            "y": 661.375,
+            "width": 230.625,
+            "height": 16.40625,
+            "right": 698.40625,
+            "bottom": 677.78125
+          },
+          "descriptionBox": {
+            "x": 467.78125,
+            "y": 681.78125,
+            "width": 230.625,
+            "height": 30,
+            "right": 698.40625,
+            "bottom": 711.78125
+          },
+          "titleScrollHeight": 16,
+          "titleClientHeight": 16,
+          "descriptionScrollHeight": 30,
+          "descriptionClientHeight": 30,
+          "icon": true
+        },
+        {
+          "title": "Сопровождаем процедуру",
+          "description": "Объясняем этапы и сопровождаем на протяжении работы.",
+          "box": {
+            "x": 720,
+            "y": 640.1875,
+            "width": 330,
+            "height": 92.796875,
+            "right": 1050,
+            "bottom": 732.984375
+          },
+          "titleBox": {
+            "x": 797.78125,
+            "y": 661.375,
+            "width": 230.625,
+            "height": 16.40625,
+            "right": 1028.40625,
+            "bottom": 677.78125
+          },
+          "descriptionBox": {
+            "x": 797.78125,
+            "y": 681.78125,
+            "width": 230.625,
+            "height": 30,
+            "right": 1028.40625,
+            "bottom": 711.78125
+          },
+          "titleScrollHeight": 16,
+          "titleClientHeight": 16,
+          "descriptionScrollHeight": 30,
+          "descriptionClientHeight": 30,
+          "icon": true
+        },
+        {
+          "title": "Остаёмся на связи",
+          "description": "Отвечаем на вопросы и объясняем, что происходит на каждом этапе.",
+          "box": {
+            "x": 1050,
+            "y": 640.1875,
+            "width": 330,
+            "height": 92.796875,
+            "right": 1380,
+            "bottom": 732.984375
+          },
+          "titleBox": {
+            "x": 1127.78125,
+            "y": 661.375,
+            "width": 230.625,
+            "height": 16.40625,
+            "right": 1358.40625,
+            "bottom": 677.78125
+          },
+          "descriptionBox": {
+            "x": 1127.78125,
+            "y": 681.78125,
+            "width": 230.625,
+            "height": 30,
+            "right": 1358.40625,
+            "bottom": 711.78125
+          },
+          "titleScrollHeight": 16,
+          "titleClientHeight": 16,
+          "descriptionScrollHeight": 30,
+          "descriptionClientHeight": 30,
+          "icon": true
+        }
+      ]
+    },
+    {
+      "name": "tablet",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "scrollWidth": 768,
+      "section": {
+        "x": 0,
+        "y": 487.390625,
+        "width": 768,
+        "height": 167.59375,
+        "right": 768,
+        "bottom": 654.984375
+      },
+      "grid": "351.734px 351.75px",
+      "cards": [
+        {
+          "title": "Работаем по закону",
+          "description": "Рассматриваем предусмотренные законом варианты решения.",
+          "box": {
+            "x": 32.25,
+            "y": 487.390625,
+            "width": 351.734375,
+            "height": 83.1875,
+            "right": 383.984375,
+            "bottom": 570.578125
+          },
+          "titleBox": {
+            "x": 99.71875,
+            "y": 503.78125,
+            "width": 271.984375,
+            "height": 16.40625,
+            "right": 371.703125,
+            "bottom": 520.1875
+          },
+          "descriptionBox": {
+            "x": 99.71875,
+            "y": 524.1875,
+            "width": 271.984375,
+            "height": 30,
+            "right": 371.703125,
+            "bottom": 554.1875
+          },
+          "titleScrollHeight": 16,
+          "titleClientHeight": 16,
+          "descriptionScrollHeight": 30,
+          "descriptionClientHeight": 30,
+          "icon": true
+        },
+        {
+          "title": "Разбираемся в ситуации",
+          "description": "Оцениваем обстоятельства и помогаем выбрать подходящий сценарий.",
+          "box": {
+            "x": 383.984375,
+            "y": 487.390625,
+            "width": 351.75,
+            "height": 83.1875,
+            "right": 735.734375,
+            "bottom": 570.578125
+          },
+          "titleBox": {
+            "x": 452.453125,
+            "y": 503.78125,
+            "width": 271,
+            "height": 16.40625,
+            "right": 723.453125,
+            "bottom": 520.1875
+          },
+          "descriptionBox": {
+            "x": 452.453125,
+            "y": 524.1875,
+            "width": 271,
+            "height": 30,
+            "right": 723.453125,
+            "bottom": 554.1875
+          },
+          "titleScrollHeight": 16,
+          "titleClientHeight": 16,
+          "descriptionScrollHeight": 30,
+          "descriptionClientHeight": 30,
+          "icon": true
+        },
+        {
+          "title": "Сопровождаем процедуру",
+          "description": "Объясняем этапы и сопровождаем на протяжении работы.",
+          "box": {
+            "x": 32.25,
+            "y": 570.578125,
+            "width": 351.734375,
+            "height": 83.40625,
+            "right": 383.984375,
+            "bottom": 653.984375
+          },
+          "titleBox": {
+            "x": 99.71875,
+            "y": 587.578125,
+            "width": 271.984375,
+            "height": 16.40625,
+            "right": 371.703125,
+            "bottom": 603.984375
+          },
+          "descriptionBox": {
+            "x": 99.71875,
+            "y": 607.984375,
+            "width": 271.984375,
+            "height": 30,
+            "right": 371.703125,
+            "bottom": 637.984375
+          },
+          "titleScrollHeight": 16,
+          "titleClientHeight": 16,
+          "descriptionScrollHeight": 30,
+          "descriptionClientHeight": 30,
+          "icon": true
+        },
+        {
+          "title": "Остаёмся на связи",
+          "description": "Отвечаем на вопросы и объясняем, что происходит на каждом этапе.",
+          "box": {
+            "x": 383.984375,
+            "y": 570.578125,
+            "width": 351.75,
+            "height": 83.40625,
+            "right": 735.734375,
+            "bottom": 653.984375
+          },
+          "titleBox": {
+            "x": 452.453125,
+            "y": 587.578125,
+            "width": 271,
+            "height": 16.40625,
+            "right": 723.453125,
+            "bottom": 603.984375
+          },
+          "descriptionBox": {
+            "x": 452.453125,
+            "y": 607.984375,
+            "width": 271,
+            "height": 30,
+            "right": 723.453125,
+            "bottom": 637.984375
+          },
+          "titleScrollHeight": 16,
+          "titleClientHeight": 16,
+          "descriptionScrollHeight": 30,
+          "descriptionClientHeight": 30,
+          "icon": true
+        }
+      ]
+    },
+    {
+      "name": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "scrollWidth": 390,
+      "section": {
+        "x": 0,
+        "y": 510.71875,
+        "width": 390,
+        "height": 333.625,
+        "right": 390,
+        "bottom": 844.34375
+      },
+      "grid": "350px",
+      "cards": [
+        {
+          "title": "Работаем по закону",
+          "description": "Рассматриваем предусмотренные законом варианты решения.",
+          "box": {
+            "x": 20,
+            "y": 510.71875,
+            "width": 350,
+            "height": 82.40625,
+            "right": 370,
+            "bottom": 593.125
+          },
+          "titleBox": {
+            "x": 75.1875,
+            "y": 526.71875,
+            "width": 294.8125,
+            "height": 16.40625,
+            "right": 370,
+            "bottom": 543.125
+          },
+          "descriptionBox": {
+            "x": 75.1875,
+            "y": 547.125,
+            "width": 294.8125,
+            "height": 30,
+            "right": 370,
+            "bottom": 577.125
+          },
+          "titleScrollHeight": 16,
+          "titleClientHeight": 16,
+          "descriptionScrollHeight": 30,
+          "descriptionClientHeight": 30,
+          "icon": true
+        },
+        {
+          "title": "Разбираемся в ситуации",
+          "description": "Оцениваем обстоятельства и помогаем выбрать подходящий сценарий.",
+          "box": {
+            "x": 20,
+            "y": 593.125,
+            "width": 350,
+            "height": 83.40625,
+            "right": 370,
+            "bottom": 676.53125
+          },
+          "titleBox": {
+            "x": 75.1875,
+            "y": 610.125,
+            "width": 294.8125,
+            "height": 16.40625,
+            "right": 370,
+            "bottom": 626.53125
+          },
+          "descriptionBox": {
+            "x": 75.1875,
+            "y": 630.53125,
+            "width": 294.8125,
+            "height": 30,
+            "right": 370,
+            "bottom": 660.53125
+          },
+          "titleScrollHeight": 16,
+          "titleClientHeight": 16,
+          "descriptionScrollHeight": 30,
+          "descriptionClientHeight": 30,
+          "icon": true
+        },
+        {
+          "title": "Сопровождаем процедуру",
+          "description": "Объясняем этапы и сопровождаем на протяжении работы.",
+          "box": {
+            "x": 20,
+            "y": 676.53125,
+            "width": 350,
+            "height": 83.40625,
+            "right": 370,
+            "bottom": 759.9375
+          },
+          "titleBox": {
+            "x": 75.1875,
+            "y": 693.53125,
+            "width": 294.8125,
+            "height": 16.40625,
+            "right": 370,
+            "bottom": 709.9375
+          },
+          "descriptionBox": {
+            "x": 75.1875,
+            "y": 713.9375,
+            "width": 294.8125,
+            "height": 30,
+            "right": 370,
+            "bottom": 743.9375
+          },
+          "titleScrollHeight": 16,
+          "titleClientHeight": 16,
+          "descriptionScrollHeight": 30,
+          "descriptionClientHeight": 30,
+          "icon": true
+        },
+        {
+          "title": "Остаёмся на связи",
+          "description": "Отвечаем на вопросы и объясняем, что происходит на каждом этапе.",
+          "box": {
+            "x": 20,
+            "y": 759.9375,
+            "width": 350,
+            "height": 83.40625,
+            "right": 370,
+            "bottom": 843.34375
+          },
+          "titleBox": {
+            "x": 75.1875,
+            "y": 776.9375,
+            "width": 294.8125,
+            "height": 16.40625,
+            "right": 370,
+            "bottom": 793.34375
+          },
+          "descriptionBox": {
+            "x": 75.1875,
+            "y": 797.34375,
+            "width": 294.8125,
+            "height": 30,
+            "right": 370,
+            "bottom": 827.34375
+          },
+          "titleScrollHeight": 16,
+          "titleClientHeight": 16,
+          "descriptionScrollHeight": 30,
+          "descriptionClientHeight": 30,
+          "icon": true
+        }
+      ]
+    }
+  ],
+  "pageErrors": [],
+  "consoleErrors": [
+    "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  ],
+  "httpErrors": []
+}

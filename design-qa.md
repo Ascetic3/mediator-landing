@@ -55,6 +55,20 @@ No actionable P0/P1/P2 visual findings remain at the requested desktop, tablet, 
 
 final result: passed
 
+## Trust bar messaging QA (2026-10-06)
+
+**Final result: passed** — no actionable P0/P1/P2 findings.
+
+- Source visual truth: original responsive reference board [codex-clipboard-ea92aebe-1b5a-44cb-9b54-1c66a768a7b2.png](C:\Users\Адм\AppData\Local\Temp\codex-clipboard-ea92aebe-1b5a-44cb-9b54-1c66a768a7b2.png), 1536 × 1024 px. Its trust-bar crops were compared for layout, icons, palette, and spacing; its older copy is superseded by the four exact text pairs in the latest user brief.
+- Browser screenshots, trust-bar region only, initial home state, device scale factor 1: [desktop](qa/trust-bar-desktop.png), 1440 × 94 px at 1440 CSS px; [tablet](qa/trust-bar-tablet.png), 768 × 168 px at 768 CSS px; [mobile](qa/trust-bar-mobile.png), 390 × 334 px at 390 CSS px.
+- Combined reference/implementation comparisons: [desktop](qa/trust-bar-comparison-desktop.png), [tablet](qa/trust-bar-comparison-tablet.png), [mobile](qa/trust-bar-comparison-mobile.png). The reference board crops were enlarged 2× for inspection; implementation captures remain at native size.
+- All four new titles and descriptions match the requested text. Existing icons, count, grid, colors, spacing, and card styles are unchanged. Descriptions fit without clipping: cards share row heights on desktop/tablet and consistent heights on mobile. No horizontal overflow at 1440, 768, or 390 px.
+- No focused crop or fix iteration was needed: the whole block is visible in each implementation capture. Browser diagnostics recorded no page errors; a generic console resource 404 remains unrelated to the block.
+
+**Findings:** None. No P3 follow-up required.
+
+final result: passed
+
 ## Hero final polish QA (2026-10-06)
 
 **Final result: passed** — no actionable P0/P1/P2 findings remain in the hero.

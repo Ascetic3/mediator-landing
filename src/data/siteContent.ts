@@ -4,22 +4,22 @@ import { Clock3, FileText, ShieldCheck, UsersRound } from 'lucide-react'
 export const trustItems: { title: string; description: string; icon: LucideIcon }[] = [
   {
     title: 'Работаем по закону',
-    description: 'Разбираем ситуацию и рассматриваем предусмотренные законом варианты.',
+    description: 'Рассматриваем предусмотренные законом варианты решения.',
     icon: ShieldCheck,
   },
   {
-    title: 'Команда специалистов',
-    description: 'К делу подключаются специалисты по выбранному направлению.',
+    title: 'Разбираемся в ситуации',
+    description: 'Оцениваем обстоятельства и помогаем выбрать подходящий сценарий.',
     icon: UsersRound,
   },
   {
-    title: 'Вникаем в детали',
-    description: 'Перед обсуждением решения анализируем обстоятельства дела.',
+    title: 'Сопровождаем процедуру',
+    description: 'Объясняем этапы и сопровождаем на протяжении работы.',
     icon: FileText,
   },
   {
-    title: 'Сопровождаем',
-    description: 'Объясняем дальнейшие шаги на протяжении работы.',
+    title: 'Остаёмся на связи',
+    description: 'Отвечаем на вопросы и объясняем, что происходит на каждом этапе.',
     icon: Clock3,
   },
 ]
