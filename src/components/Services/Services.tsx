@@ -1,5 +1,7 @@
-import { ArrowRight, ChevronRight } from 'lucide-react'
-import { services } from '../../data/siteContent'
+import { useRef, useState } from 'react'
+import { ArrowRight } from 'lucide-react'
+import { services, type ServiceItem } from '../../data/siteContent'
+import ServiceDetailsModal from './ServiceDetailsModal'
 import styles from './Services.module.scss'
 
 const assetUrls = Object.values(import.meta.glob('../../assets/images/service-*-temp.webp', {
@@ -10,6 +12,16 @@ const assetUrls = Object.values(import.meta.glob('../../assets/images/service-*-
 
 function Services() {
   const images = Object.keys(import.meta.glob('../../assets/images/service-*-temp.webp')).sort()
+  const [activeService, setActiveService] = useState<ServiceItem | null>(null)
+  const returnFocusRef = useRef<HTMLButtonElement | null>(null)
+
+  function discussSituation() {
+    setActiveService(null)
+    requestAnimationFrame(() => {
+      document.querySelector('#contact form')?.scrollIntoView({ behavior: 'smooth', block: 'center' })
+      document.getElementById('contact-name')?.focus({ preventScroll: true })
+    })
+  }
 
   return (
     <section className={`container ${styles.section}`} id="services" aria-labelledby="services-title">
@@ -31,14 +43,29 @@ function Services() {
               <div className={styles.cardBody}>
                 <h3>{service.title}</h3>
                 <p>{service.description}</p>
-                <a className={styles.cardLink} href="#contact" aria-label={`Обсудить услугу: ${service.title}`}>
-                  <ChevronRight size={18} aria-hidden="true" />
-                </a>
+                <button
+                  className={styles.cardLink}
+                  type="button"
+                  aria-haspopup="dialog"
+                  aria-label={`Подробнее об услуге: ${service.title}`}
+                  onClick={(event) => {
+                    returnFocusRef.current = event.currentTarget
+                    setActiveService(service)
+                  }}
+                >
+                  Подробнее <ArrowRight size={15} aria-hidden="true" />
+                </button>
               </div>
             </article>
           )
         })}
       </div>
+      <ServiceDetailsModal
+        service={activeService}
+        returnFocusRef={returnFocusRef}
+        onClose={() => setActiveService(null)}
+        onDiscuss={discussSituation}
+      />
     </section>
   )
 }
