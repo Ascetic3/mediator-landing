@@ -1,5 +1,4 @@
 import { ArrowRight } from 'lucide-react'
-import heroImage from '../../assets/images/hero-counselor-temp.webp'
 import styles from './Hero.module.scss'
 
 function Hero() {
@@ -20,7 +19,7 @@ function Hero() {
           </div>
         </div>
         <figure className={styles.imageWrap}>
-          <img src={heroImage} alt="Временный фотопортрет специалиста; заменить на утверждённое фото" />
+          <img src="/hero-agency-consultation.png" alt="Переговорное пространство с рабочим столом для консультаций" />
         </figure>
       </div>
     </section>

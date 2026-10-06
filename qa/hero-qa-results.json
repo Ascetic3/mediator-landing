@@ -1,0 +1,72 @@
+{
+  "views": [
+    {
+      "name": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "scrollWidth": 1440,
+      "heroHeight": 575.890625,
+      "image": {
+        "x": 680.390625,
+        "y": 102.59375,
+        "width": 699.609375,
+        "height": 524.703125,
+        "naturalWidth": 1448,
+        "naturalHeight": 1086,
+        "objectFit": "cover",
+        "objectPosition": "68% 50%",
+        "src": "http://127.0.0.1:5174/hero-agency-consultation.png",
+        "loaded": true
+      }
+    },
+    {
+      "name": "tablet",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "scrollWidth": 768,
+      "heroHeight": 416,
+      "image": {
+        "x": 362.875,
+        "y": 87.390625,
+        "width": 372.859375,
+        "height": 384,
+        "naturalWidth": 1448,
+        "naturalHeight": 1086,
+        "objectFit": "cover",
+        "objectPosition": "68% 50%",
+        "src": "http://127.0.0.1:5174/hero-agency-consultation.png",
+        "loaded": true
+      }
+    },
+    {
+      "name": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "scrollWidth": 390,
+      "heroHeight": 610.15625,
+      "image": {
+        "x": 0,
+        "y": 408.546875,
+        "width": 390,
+        "height": 273,
+        "naturalWidth": 1448,
+        "naturalHeight": 1086,
+        "objectFit": "cover",
+        "objectPosition": "64% 44%",
+        "src": "http://127.0.0.1:5174/hero-agency-consultation.png",
+        "loaded": true
+      }
+    }
+  ],
+  "consoleErrors": [
+    "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  ],
+  "pageErrors": [],
+  "httpErrors": []
+}

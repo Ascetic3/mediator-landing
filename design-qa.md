@@ -54,3 +54,18 @@ No actionable P0/P1/P2 visual findings remain at the requested desktop, tablet, 
 - Earlier full-page QA still records a 404 for `/favicon.ico`; this is outside the leader/gallery scope and does not affect rendering.
 
 final result: passed
+
+## Hero asset update QA (2026-10-06)
+
+**Final result: passed** — no actionable P0/P1/P2 findings in the hero at desktop, tablet, or mobile sizes.
+
+- Source visual truth: the user-provided final hero asset, copied without modification to `public/hero-agency-consultation.png`; source dimensions are 1448 × 1086 px and the rendered image reports the same natural dimensions. The source file itself is the visual subject reference; it does not specify a separate layout or text treatment.
+- Implementation screenshots (hero section only, initial home state, device scale factor 1): [qa/hero-desktop.png](qa/hero-desktop.png), 1440 × 576 px at 1440 × 1000 CSS viewport; [qa/hero-tablet.png](qa/hero-tablet.png), 768 × 417 px at 768 × 1000 CSS viewport; [qa/hero-mobile.png](qa/hero-mobile.png), 390 × 611 px at 390 × 844 CSS viewport.
+- Side-by-side evidence, with the source asset proportionally scaled to the screenshot height and the implementation screenshot retained at native capture size: [desktop](qa/hero-qa-comparison-desktop.png), [tablet](qa/hero-qa-comparison-tablet.png), [mobile](qa/hero-qa-comparison-mobile.png). The comparisons show the intended consultation environment intact at every crop: desk, laptop, empty seating, and warm orderly interior. At tablet and mobile, edge furnishings are cropped by `object-fit: cover`, while the central consultation workspace remains clear.
+- Required visual surfaces: typography, spacing, color palette, text, CTAs, and section geometry were left unchanged. The warm asset remains compatible with the existing cream/terracotta hero palette. The image stays a normal `<img>` asset and is not a text-bearing background. No horizontal overflow: `scrollWidth` equals viewport width at 1440, 768, and 390 px. Image decoded successfully at all sizes.
+- No focused additional crop was needed: each full hero-section capture shows the complete rendered image and its relationship to the unchanged copy. No fix iteration was needed.
+- Browser diagnostics: no page errors; one console 404 resource message was present, outside this hero change. No failed HTTP response was attributed to the new asset.
+
+**Findings:** None at P0/P1/P2. No P3 hero polish is required for this handoff.
+
+final result: passed
