@@ -1,5 +1,6 @@
 .section {
-  padding-block: 0 var(--section-spacing);
+  padding-block: clamp(3rem, 4.5vw, 4rem);
+  background: var(--surface-soft);
 }
 
 .title {

@@ -1,0 +1,211 @@
+{
+  "viewports": [
+    {
+      "name": "desktop",
+      "viewportWidth": 1440,
+      "documentWidth": 1440,
+      "sections": {
+        "services": {
+          "top": 772,
+          "bottom": 1361,
+          "height": 589,
+          "background": "rgb(253, 248, 243)"
+        },
+        "process": {
+          "top": 1361,
+          "bottom": 1666,
+          "height": 305,
+          "background": "rgb(248, 238, 230)"
+        },
+        "about": {
+          "top": 1666,
+          "bottom": 2321,
+          "height": 655,
+          "background": "rgb(253, 248, 243)"
+        },
+        "leader-title": {
+          "top": 2321,
+          "bottom": 3001,
+          "height": 680,
+          "background": "rgb(253, 248, 243)"
+        },
+        "faq": {
+          "top": 3001,
+          "bottom": 3674,
+          "height": 674,
+          "background": "rgb(248, 238, 230)"
+        },
+        "contact": {
+          "top": 3674,
+          "bottom": 4225,
+          "height": 550,
+          "background": "rgb(244, 233, 224)"
+        },
+        "footer": {
+          "top": 4225,
+          "bottom": 4499,
+          "height": 275,
+          "background": "rgb(248, 238, 230)"
+        }
+      },
+      "faqBackgroundFullBleed": true
+    },
+    {
+      "name": "wide-tablet",
+      "viewportWidth": 1024,
+      "documentWidth": 1024,
+      "sections": {
+        "services": {
+          "top": 716,
+          "bottom": 1214,
+          "height": 498,
+          "background": "rgb(253, 248, 243)"
+        },
+        "process": {
+          "top": 1214,
+          "bottom": 1542,
+          "height": 328,
+          "background": "rgb(248, 238, 230)"
+        },
+        "about": {
+          "top": 1542,
+          "bottom": 2201,
+          "height": 659,
+          "background": "rgb(253, 248, 243)"
+        },
+        "leader-title": {
+          "top": 2201,
+          "bottom": 2757,
+          "height": 555,
+          "background": "rgb(253, 248, 243)"
+        },
+        "faq": {
+          "top": 2757,
+          "bottom": 3422,
+          "height": 665,
+          "background": "rgb(248, 238, 230)"
+        },
+        "contact": {
+          "top": 3422,
+          "bottom": 3910,
+          "height": 488,
+          "background": "rgb(244, 233, 224)"
+        },
+        "footer": {
+          "top": 3910,
+          "bottom": 4218,
+          "height": 308,
+          "background": "rgb(248, 238, 230)"
+        }
+      },
+      "faqBackgroundFullBleed": true
+    },
+    {
+      "name": "tablet",
+      "viewportWidth": 768,
+      "documentWidth": 768,
+      "sections": {
+        "services": {
+          "top": 777,
+          "bottom": 1705,
+          "height": 927,
+          "background": "rgb(253, 248, 243)"
+        },
+        "process": {
+          "top": 1705,
+          "bottom": 2069,
+          "height": 364,
+          "background": "rgb(248, 238, 230)"
+        },
+        "about": {
+          "top": 2069,
+          "bottom": 2761,
+          "height": 693,
+          "background": "rgb(253, 248, 243)"
+        },
+        "leader-title": {
+          "top": 2761,
+          "bottom": 3326,
+          "height": 565,
+          "background": "rgb(253, 248, 243)"
+        },
+        "faq": {
+          "top": 3326,
+          "bottom": 4015,
+          "height": 689,
+          "background": "rgb(248, 238, 230)"
+        },
+        "contact": {
+          "top": 4015,
+          "bottom": 4483,
+          "height": 468,
+          "background": "rgb(244, 233, 224)"
+        },
+        "footer": {
+          "top": 4483,
+          "bottom": 4916,
+          "height": 433,
+          "background": "rgb(248, 238, 230)"
+        }
+      },
+      "faqBackgroundFullBleed": true
+    },
+    {
+      "name": "mobile",
+      "viewportWidth": 390,
+      "documentWidth": 390,
+      "sections": {
+        "services": {
+          "top": 1194,
+          "bottom": 2702,
+          "height": 1508,
+          "background": "rgb(253, 248, 243)"
+        },
+        "process": {
+          "top": 2702,
+          "bottom": 3264,
+          "height": 562,
+          "background": "rgb(248, 238, 230)"
+        },
+        "about": {
+          "top": 3264,
+          "bottom": 4158,
+          "height": 894,
+          "background": "rgb(253, 248, 243)"
+        },
+        "leader-title": {
+          "top": 4158,
+          "bottom": 4985,
+          "height": 827,
+          "background": "rgb(253, 248, 243)"
+        },
+        "faq": {
+          "top": 4985,
+          "bottom": 5743,
+          "height": 758,
+          "background": "rgb(248, 238, 230)"
+        },
+        "contact": {
+          "top": 5743,
+          "bottom": 6374,
+          "height": 631,
+          "background": "rgb(244, 233, 224)"
+        },
+        "footer": {
+          "top": 6374,
+          "bottom": 6919,
+          "height": 545,
+          "background": "rgb(248, 238, 230)"
+        }
+      },
+      "faqBackgroundFullBleed": true
+    }
+  ],
+  "reducedMotion": {
+    "preference": true,
+    "motionSystemClassApplied": false,
+    "heroAnimationDuration": "1e-05s",
+    "documentWidth": 390,
+    "viewportWidth": 390
+  }
+}

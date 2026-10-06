@@ -1,6 +1,6 @@
 .section {
-  padding-block: clamp(1.8rem, 3.6vw, 3rem);
-  background: var(--color-surface-warm);
+  padding-block: clamp(2.25rem, 3.5vw, 3rem);
+  background: var(--surface-base);
 }
 
 .layout {
@@ -9,7 +9,7 @@
   grid-template-columns: 0.98fr 1.02fr;
   overflow: hidden;
   border-radius: var(--radius-card);
-  background: var(--color-background);
+  background: var(--color-surface);
 }
 
 .copy {

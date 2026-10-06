@@ -174,3 +174,16 @@ final result: passed
 - **Fidelity:** typography hierarchy, two-column desktop/tablet layout, mobile stacked layout, palette, divider style, and icon treatment preserve the supplied design. No image assets are used in this section. All eight answers are concise and conditional where details depend on individual circumstances; no exact time, price, guaranteed result, or asset-retention claim was added.
 - **Interaction/accessibility:** full-width native buttons expose ria-expanded/ria-controls with unique IDs and labelled answer regions. Pointer cursor and 2 px focus outline verified. Repeated click closes; switching questions closes the previous one. Enter and Space pass at all three widths. Long answer wraps; document width matches each viewport, with no horizontal overflow or page errors.
 - **Evidence limits:** legacy FAQ details in the content inventory are marked VERIFY; the copy avoids relying on their specific legal outcomes or figures.
+
+## Full-page section rhythm and surface QA (2026-10-07)
+
+**Full-page QA: passed** — the page now has distinct semantic chapters without a mechanical alternating stripe; no P0/P1/P2 issues remain.
+
+- **Full-page screenshots:** [before desktop 1440](qa/section-rhythm-before/desktop.png), [after desktop 1440](qa/section-rhythm-after/desktop.png); [1024](qa/section-rhythm-after/wide-tablet.png); [tablet 768](qa/section-rhythm-after/tablet.png); [mobile 390](qa/section-rhythm-after/mobile.png). Before and after captures were taken during this QA run at DPR 1 after fonts and one-time motion reveals settled. Measured viewport/document widths match at all four sizes.
+- **Surface map:** Services uses base ivory `#fdf8f3`; Process uses soft cream `#f8eee6`; About and Leader return to base ivory, with the About content card lifted subtly onto `#fffdfb`; FAQ uses its own full-bleed soft cream zone; the consultation form uses accent cream `#f4e9e0`; Footer ends on soft cream. These are three section-background levels, with the existing card surface retained as a component fill.
+- **Review questions:** Services and Process are clearly separated by tone and the Process section’s own padding. About and Leader intentionally continue on the same base surface as one agency/specialist story. FAQ is separated from Leader by a full-width soft zone. Color transitions align with section meaning; warm tones are limited to Process, FAQ, the final CTA, and Footer rather than alternating after every section. The page reads more coherently than the baseline, without an excessive cream wash or accidental empty bands.
+- **Implementation scope:** Only surface tokens, section backgrounds, vertical spacing, the About card surface, and a wrapper inside FAQ were changed. The four Process steps remain in the existing layout; no popup or content changes were introduced. Hero + trust container, dimensions, spacing, and responsive structure are unchanged.
+- **Motion and responsive checks:** reduced-motion emulation is honored (hero reveal duration `0.00001s`, scroll reveal system not applied). The FAQ background spans the full viewport at 1440, 1024, 768, and 390px. No horizontal overflow or browser errors were observed.
+- **Evidence:** machine-readable section bounds and computed colors are in [metrics.json](qa/section-rhythm-after/metrics.json). No P3 follow-up was identified.
+
+final result: passed

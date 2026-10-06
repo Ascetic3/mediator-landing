@@ -3,7 +3,8 @@
   grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
   align-items: center;
   gap: clamp(1.5rem, 4vw, 4rem);
-  padding-block: var(--section-spacing);
+  padding-block: clamp(2.75rem, 5vw, 4.25rem);
+  background: var(--surface-base);
 }
 
 .portrait {

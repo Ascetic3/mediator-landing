@@ -1,7 +1,7 @@
 .footer {
   padding-block: clamp(2rem, 4vw, 3rem) 1rem;
   border-top: 1px solid var(--color-border);
-  background: var(--color-background);
+  background: var(--surface-footer);
   transition: opacity var(--motion-slow) var(--ease-out);
 }
 
