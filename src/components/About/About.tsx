@@ -1,6 +1,6 @@
 import { useCallback, useRef, useState } from 'react'
-import officeImage from '../../assets/images/office-interior-temp.webp'
 import { aboutContent } from '../../data/siteContent'
+import SafeImage from '../SafeImage/SafeImage'
 import AboutModal from './AboutModal'
 import styles from './About.module.scss'
 
@@ -39,12 +39,12 @@ function About() {
   return (
     <section className={styles.section} id="about" aria-labelledby="about-title">
       <div className={`container ${styles.layout}`}>
-        <div className={styles.copy}>
+        <div className={styles.copy} data-motion="about-copy">
           <p className="eyebrow">{aboutContent.eyebrow}</p>
           <h2 className="section-title" id="about-title">{aboutContent.title}</h2>
           {aboutContent.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
           <ul className={styles.directions} aria-label="Направления агентства">
-            {aboutContent.focusAreas.map((area) => <li key={area}>{area}</li>)}
+            {aboutContent.focusAreas.map((area) => <li key={area} data-motion="about-marker">{area}</li>)}
           </ul>
           <button
             ref={returnFocusRef}
@@ -55,8 +55,18 @@ function About() {
             {aboutContent.action}
           </button>
         </div>
-        <figure className={styles.imageWrap}>
-          <img src={officeImage} alt="Временное фото интерьера; заменить на фотографию офиса агентства" loading="lazy" />
+        <figure className={styles.imageWrap} data-motion="about-image">
+          <SafeImage
+            frameClassName={styles.imageFrame}
+            src="/images/office-interior-960.webp"
+            srcSet="/images/office-interior-480.webp 480w, /images/office-interior-768.webp 768w, /images/office-interior-960.webp 960w, /images/office-interior-1280.webp 1280w, /images/office-interior-1440.webp 1440w"
+            sizes="(max-width: 700px) 100vw, (max-width: 1320px) 50vw, 660px"
+            width={1672}
+            height={941}
+            alt="Временное фото интерьера; заменить на фотографию офиса агентства"
+            loading="lazy"
+            decoding="async"
+          />
         </figure>
       </div>
       <AboutModal

@@ -15,31 +15,28 @@ function App() {
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
     if (!main || reduceMotion || !('IntersectionObserver' in window)) return
 
-    const sections = Array.from(main.children)
-      .filter((element): element is HTMLElement => element instanceof HTMLElement && element.tagName === 'SECTION')
-      .slice(1)
-
-    if (!sections.length) return
-    document.documentElement.classList.add('has-scroll-reveal')
+    const motionTargets = Array.from(document.querySelectorAll<HTMLElement>('[data-motion]'))
+    if (!motionTargets.length) return
+    document.documentElement.classList.add('has-motion')
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return
-        const section = entry.target as HTMLElement
-        section.dataset.scrollReveal = 'visible'
-        observer.unobserve(section)
+        const target = entry.target as HTMLElement
+        target.dataset.motionState = 'visible'
+        observer.unobserve(target)
       })
-    }, { threshold: 0.08 })
+    }, { threshold: 0.12 })
 
-    sections.forEach((section) => {
-      section.dataset.scrollReveal = 'pending'
-      observer.observe(section)
+    motionTargets.forEach((target) => {
+      target.dataset.motionState = 'pending'
+      observer.observe(target)
     })
 
     return () => {
       observer.disconnect()
-      document.documentElement.classList.remove('has-scroll-reveal')
-      sections.forEach((section) => delete section.dataset.scrollReveal)
+      document.documentElement.classList.remove('has-motion')
+      motionTargets.forEach((target) => delete target.dataset.motionState)
     }
   }, [])
 
@@ -47,8 +44,10 @@ function App() {
     <>
       <Header />
       <main id="main-content">
-        <Hero />
-        <TrustBar />
+        <div className="container heroComposition">
+          <Hero />
+          <TrustBar />
+        </div>
         <Services />
         <Process />
         <About />

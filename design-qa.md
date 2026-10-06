@@ -55,6 +55,19 @@ No actionable P0/P1/P2 visual findings remain at the requested desktop, tablet, 
 
 final result: passed
 
+## Unified hero and trust area QA (2026-10-07)
+
+**Final result: passed** — the hero and trust area render as one contained first-screen composition; no P0/P1/P2 findings remain.
+
+- **Visual target:** the user supplied a revised hero/trust screenshot and specified one shared outer container, one radius and border, an internal divider, no gap between the two internal zones, and a 20px breathing space before Services.
+- **Implementation screenshots** (DPR 1, production preview): [desktop 1440](qa/hero-trust-desktop.png), [wide tablet 1024](qa/hero-trust-wide-tablet.png), [tablet 768](qa/hero-trust-tablet.png), [mobile 390](qa/hero-trust-mobile.png). The complete hero/trust container was captured at each width.
+- **Layout evidence:** the shared outer container spans 1318px at 1440, 936px at 1024, 702px at 768, and 348px at 390. Trust is 4 columns at desktop/wide tablet and 2 × 2 at tablet/mobile. At every viewport the trust area remains inside the cream container, and the Services section begins 20px after its bottom. Document `scrollWidth` equals viewport width at all four sizes.
+- **Visual review:** the hero image/text and trust area share one warm surface, one outer border/radius, and one width. Trust has only a fine internal top divider and a subtly different cream tone; its former outer card border, radius, and shadow are removed. The hero/trust seam has no gap. The outer container keeps 20px spacing from the header and from Services. Motion uses the slower shared tokens; reduced-motion emulation disables the reveal.
+- **Anchors and browser health:** header Home and logo retain `#main-content`; Services anchor offsets still land below the sticky header. No browser errors or failed HTTP responses. Full-page captures at 1440, 1024, 768, and 390 are in `qa/technical-after/`.
+- **P3:** none identified for this composition.
+
+final result: passed
+
 ## Trust bar messaging QA (2026-10-06)
 
 **Final result: passed** — no actionable P0/P1/P2 findings.

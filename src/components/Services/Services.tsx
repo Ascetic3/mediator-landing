@@ -1,17 +1,30 @@
 import { useRef, useState } from 'react'
 import { ArrowRight } from 'lucide-react'
 import { services, type ServiceItem } from '../../data/siteContent'
+import SafeImage from '../SafeImage/SafeImage'
 import ServiceDetailsModal from './ServiceDetailsModal'
 import styles from './Services.module.scss'
 
-const assetUrls = Object.values(import.meta.glob('../../assets/images/service-*-temp.webp', {
-  eager: true,
-  query: '?url',
-  import: 'default',
-})) as string[]
+const serviceImages: Record<string, { src: string; srcSet: string }> = {
+  'service-procedure-temp.webp': {
+    src: '/images/service-procedure-640.webp',
+    srcSet: '/images/service-procedure-360.webp 360w, /images/service-procedure-640.webp 640w, /images/service-procedure-960.webp 960w, /images/service-procedure-1280.webp 1280w',
+  },
+  'service-managers-temp.webp': {
+    src: '/images/service-managers-640.webp',
+    srcSet: '/images/service-managers-360.webp 360w, /images/service-managers-640.webp 640w, /images/service-managers-960.webp 960w, /images/service-managers-1280.webp 1280w',
+  },
+  'service-settlement-temp.webp': {
+    src: '/images/service-settlement-640.webp',
+    srcSet: '/images/service-settlement-360.webp 360w, /images/service-settlement-640.webp 640w, /images/service-settlement-960.webp 960w, /images/service-settlement-1280.webp 1280w',
+  },
+  'service-installments-temp.webp': {
+    src: '/images/service-installments-640.webp',
+    srcSet: '/images/service-installments-360.webp 360w, /images/service-installments-640.webp 640w, /images/service-installments-960.webp 960w, /images/service-installments-1280.webp 1280w',
+  },
+}
 
 function Services() {
-  const images = Object.keys(import.meta.glob('../../assets/images/service-*-temp.webp')).sort()
   const [activeService, setActiveService] = useState<ServiceItem | null>(null)
   const returnFocusRef = useRef<HTMLButtonElement | null>(null)
 
@@ -34,12 +47,22 @@ function Services() {
       </div>
       <div className={styles.grid}>
         {services.map((service) => {
-          const assetIndex = images.findIndex((path) => path.endsWith(service.image))
-          const image = assetUrls[assetIndex] ?? assetUrls[0]
+          const image = serviceImages[service.image]
 
           return (
-            <article className={styles.card} key={service.title}>
-              <img className={styles.image} src={image} alt={service.alt} loading="lazy" />
+            <article className={styles.card} key={service.title} data-motion="service-card">
+              <SafeImage
+                className={styles.image}
+                src={image.src}
+                srcSet={image.srcSet}
+                sizes="(max-width: 520px) calc(100vw - 2.5rem), (max-width: 900px) calc(50vw - 2.5rem), (max-width: 1400px) calc((100vw - 5rem) / 4), 320px"
+                width={1448}
+                height={1086}
+                alt={service.alt}
+                loading="lazy"
+                decoding="async"
+                frameClassName={styles.imageFrame}
+              />
               <div className={styles.cardBody}>
                 <h3>{service.title}</h3>
                 <p>{service.description}</p>

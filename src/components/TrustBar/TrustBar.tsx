@@ -4,9 +4,9 @@ import styles from './TrustBar.module.scss'
 function TrustBar() {
   return (
     <section className={styles.bar} aria-label="Принципы работы агентства">
-      <div className={`container ${styles.grid}`}>
+      <div className={styles.grid} data-motion="trust-card">
         {trustItems.map(({ title, description, icon: Icon }) => (
-          <article className={styles.item} key={title}>
+          <article className={styles.item} key={title} data-motion="trust-item">
             <span className={styles.icon}><Icon size={22} strokeWidth={1.6} aria-hidden="true" /></span>
             <div>
               <h2>{title}</h2>

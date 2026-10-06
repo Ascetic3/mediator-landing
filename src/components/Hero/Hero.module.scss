@@ -1,14 +1,15 @@
 .hero {
-  padding-block: clamp(1rem, 2vw, 1.6rem);
-  background: var(--color-surface-warm);
+  padding: 0;
+  background: none;
 }
 
 .grid {
   display: grid;
+  width: 100%;
   min-height: clamp(24rem, 38vw, 32rem);
   grid-template-columns: 1fr 1fr;
   overflow: hidden;
-  border-radius: var(--radius-card);
+  border-radius: 0;
   background: var(--color-background);
 }
 
@@ -18,6 +19,16 @@
   flex-direction: column;
   justify-content: center;
   padding: clamp(1.6rem, 4vw, 3.5rem);
+
+  > [data-hero-reveal] {
+    opacity: 0;
+    animation: hero-copy-reveal var(--motion-slow) var(--ease-out) forwards;
+  }
+
+  > :global(.eyebrow)[data-hero-reveal='1'] { animation-delay: 0ms; }
+  > h1[data-hero-reveal='2'] { animation-delay: 120ms; }
+  > [data-hero-reveal='3'] { animation-delay: 240ms; }
+  > [data-hero-reveal='4'] { animation-delay: 360ms; }
 
   h1 {
     max-width: 15ch;
@@ -35,7 +46,8 @@
   max-width: 32rem;
   margin-top: 1.1rem;
   color: var(--color-text-secondary);
-  font-size: clamp(0.84rem, 1.1vw, 0.98rem);
+  font-size: clamp(1rem, 1.1vw, 1.05rem);
+  line-height: 1.55;
 }
 
 .actions {
@@ -46,17 +58,32 @@
 }
 
 .imageWrap {
+  position: relative;
   min-height: 100%;
   overflow: hidden;
   background: #ddc9b9;
 
-  img {
+  .imageFrame {
     width: 100%;
     height: 100%;
     min-height: 24rem;
-    object-fit: cover;
-    object-position: 68% center;
   }
+
+  [data-image-status='loaded'] .heroImage {
+    min-height: 24rem;
+    object-position: 68% center;
+    animation: hero-image-reveal var(--motion-slow) var(--ease-out) both;
+  }
+}
+
+@keyframes hero-copy-reveal {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes hero-image-reveal {
+  from { opacity: 0; transform: scale(1.015); }
+  to { opacity: 1; transform: scale(1); }
 }
 
 @media (max-width: 700px) {
@@ -83,27 +110,43 @@
 
   .description {
     margin-top: 0.8rem;
-    font-size: 0.84rem;
+    font-size: 1rem;
   }
 
   .actions {
     width: 100%;
+    align-items: stretch;
+    flex-direction: column;
     gap: 0.55rem;
     margin-top: 1rem;
 
     .button {
-      flex: 1 1 9.5rem;
+      width: min(100%, 22rem);
+      flex: 0 0 auto;
       padding-inline: 0.7rem;
-      font-size: 0.73rem;
+      font-size: 0.95rem;
     }
   }
 
   .imageWrap {
     height: clamp(14rem, 70vw, 18rem);
 
-    img {
+    .imageFrame {
+      min-height: 0;
+    }
+
+    [data-image-status='loaded'] .heroImage {
       min-height: 0;
       object-position: 64% 44%;
     }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .copy > [data-hero-reveal],
+  .imageWrap .heroImage {
+    opacity: 1;
+    animation: none;
+    transform: none;
   }
 }

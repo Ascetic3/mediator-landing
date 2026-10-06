@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Menu, X } from 'lucide-react'
 import mediatorMark from '../../assets/brand/mediator-mark.png'
-import { navigationLinks } from '../../data/navigation'
+import { headerNavigationLinks } from '../../data/navigation'
 import styles from './Header.module.scss'
 
 function Header() {
@@ -36,7 +36,8 @@ function Header() {
   useEffect(() => {
     if (!('IntersectionObserver' in window)) return
 
-    const sections = navigationLinks
+    const sections = headerNavigationLinks
+      .filter(({ href }) => href !== '#main-content')
       .map(({ href }) => document.querySelector<HTMLElement>(href))
       .filter((section): section is HTMLElement => section !== null)
     const observer = new IntersectionObserver((entries) => {
@@ -60,7 +61,7 @@ function Header() {
         </a>
 
         <nav id="site-navigation" className={`${styles.nav} ${menuOpen ? styles.navOpen : ''}`} aria-label="Основная навигация">
-          {navigationLinks.map((link) => (
+          {headerNavigationLinks.map((link) => (
             <a key={link.href} href={link.href} onClick={closeMenu} aria-current={activeLink === link.href ? 'location' : undefined}>
               {link.label}
             </a>

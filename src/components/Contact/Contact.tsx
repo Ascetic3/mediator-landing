@@ -36,12 +36,12 @@ function Contact() {
   return (
     <section className={styles.section} id="contact" aria-labelledby="contact-title">
       <div className={`container ${styles.layout}`}>
-        <div className={styles.copy}>
+        <div className={styles.copy} data-motion="contact-copy">
           <p className="eyebrow">Первый шаг — разговор</p>
           <h2 className="section-title" id="contact-title">Нужна помощь?</h2>
           <p>Оставьте контакты, чтобы обсудить вашу ситуацию и возможные варианты решения.</p>
         </div>
-        <form className={styles.form} onSubmit={handleSubmit} noValidate>
+        <form className={styles.form} onSubmit={handleSubmit} noValidate data-motion="contact-form">
           <label htmlFor="contact-name">Ваше имя</label>
           <input
             id="contact-name"

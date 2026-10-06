@@ -13,7 +13,7 @@ function FAQ() {
         <p className="eyebrow">Отвечаем на вопросы</p>
         <h2 className="section-title" id="faq-title">Частые вопросы</h2>
       </div>
-      <div className={styles.list}>
+      <div className={styles.list} data-motion="faq-list">
         {faqItems.map((item, index) => {
           const isOpen = openIndex === index
           const questionId = `${idPrefix}-question-${index}`
@@ -33,13 +33,14 @@ function FAQ() {
                 <ChevronDown size={18} aria-hidden="true" />
               </button>
               <div
-                className={styles.answer}
+                className={`${styles.answer} ${isOpen ? styles.answerOpen : ''}`}
                 id={answerId}
                 role="region"
                 aria-labelledby={questionId}
-                hidden={!isOpen}
+                aria-hidden={!isOpen}
+                inert={!isOpen}
               >
-                <p>{item.answer}</p>
+                <div className={styles.answerInner}><p>{item.answer}</p></div>
               </div>
             </div>
           )

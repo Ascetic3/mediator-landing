@@ -9,7 +9,7 @@ function Process() {
         <h2 className={`section-title ${styles.title}`} id="process-title">Как проходит работа</h2>
         <ol className={styles.steps}>
           {processSteps.map((step) => (
-            <li className={styles.step} key={step.number}>
+            <li className={styles.step} key={step.number} data-motion="process-step">
               <span className={styles.number}>{step.number}</span>
               <div>
                 <h3>{step.title}</h3>

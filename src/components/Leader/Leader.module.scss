@@ -13,11 +13,14 @@
   border-radius: var(--radius-card);
   background: var(--color-surface-warm);
 
-  img {
+  .portraitImage {
     width: 100%;
     aspect-ratio: 0.92;
-    object-fit: cover;
-    object-position: 56% 28%;
+
+    &[data-image-status='loaded'] > :global(img) {
+      object-fit: cover;
+      object-position: 56% 28%;
+    }
   }
 }
 
@@ -34,7 +37,8 @@
   max-width: 39rem;
   margin-top: 0.85rem;
   color: var(--color-text-secondary);
-  font-size: 0.92rem;
+  font-size: 1rem;
+  line-height: 1.55;
 }
 
 .facts {
@@ -62,9 +66,24 @@
 
   li > p {
     color: var(--color-text-secondary);
-    font-size: 0.82rem;
-    line-height: 1.45;
+    font-size: 0.94rem;
+    line-height: 1.5;
   }
+}
+
+.portrait,
+.copy,
+.facts li,
+.copy > div[data-motion='leader-gallery'] {
+  transition: opacity var(--motion-slow) var(--ease-out), transform var(--motion-slow) var(--ease-out);
+}
+
+.facts li {
+  transition: opacity var(--motion-base) var(--ease-out) var(--reveal-delay, 0ms), transform var(--motion-base) var(--ease-out) var(--reveal-delay, 0ms);
+
+  &:nth-child(1) { --reveal-delay: 0ms; }
+  &:nth-child(2) { --reveal-delay: 120ms; }
+  &:nth-child(3) { --reveal-delay: 240ms; }
 }
 
 @media (max-width: 900px) {
@@ -72,7 +91,7 @@
     gap: 1.5rem;
   }
 
-  .portrait img {
+  .portrait .portraitImage {
     aspect-ratio: 0.86;
   }
 }
@@ -87,10 +106,13 @@
   .portrait {
     max-height: 20rem;
 
-    img {
+    .portraitImage {
       aspect-ratio: 1.2;
       max-height: 20rem;
-      object-position: 55% 23%;
+
+      &[data-image-status='loaded'] > :global(img) {
+        object-position: 55% 23%;
+      }
     }
   }
 
@@ -110,5 +132,14 @@
     li {
       padding-block: 0.55rem;
     }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portrait,
+  .copy,
+  .facts li,
+  .copy > div[data-motion='leader-gallery'] {
+    transition: none;
   }
 }

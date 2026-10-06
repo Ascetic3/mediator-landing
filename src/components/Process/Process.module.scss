@@ -29,16 +29,33 @@
 
   h3 {
     margin-top: 0.25rem;
-    font-size: 0.78rem;
+    font-size: 0.94rem;
     font-weight: 600;
   }
 
   p {
     margin-top: 0.3rem;
     color: var(--color-text-muted);
-    font-size: 0.68rem;
-    line-height: 1.4;
+    font-size: 0.875rem;
+    line-height: 1.5;
   }
+}
+
+.step {
+  transition: opacity var(--motion-base) var(--ease-out) var(--reveal-delay, 0ms), transform var(--motion-base) var(--ease-out) var(--reveal-delay, 0ms);
+
+  &:nth-child(1) { --reveal-delay: 0ms; }
+  &:nth-child(2) { --reveal-delay: 120ms; }
+  &:nth-child(3) { --reveal-delay: 240ms; }
+  &:nth-child(4) { --reveal-delay: 360ms; }
+}
+
+.number {
+  transition: transform var(--motion-base) var(--ease-out) var(--reveal-delay, 0ms);
+}
+
+.step[data-motion-state='pending'] .number {
+  transform: scale(0.94);
 }
 
 .number {

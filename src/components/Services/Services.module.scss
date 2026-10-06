@@ -20,7 +20,7 @@
   gap: 0.35rem;
   padding-bottom: 0.25rem;
   color: var(--color-primary-hover);
-  font-size: 0.72rem;
+  font-size: 0.9rem;
   font-weight: 500;
   text-decoration: none;
 }
@@ -41,7 +41,12 @@
   border: 1px solid var(--color-border);
   border-radius: var(--radius-card);
   background: var(--color-surface);
-  transition: border-color 160ms ease, transform 160ms ease;
+  transition: border-color var(--motion-fast) var(--ease-standard), transform var(--motion-fast) var(--ease-standard), opacity var(--motion-slow) var(--ease-out) var(--reveal-delay, 0ms);
+
+  &:nth-child(1) { --reveal-delay: 0ms; }
+  &:nth-child(2) { --reveal-delay: 120ms; }
+  &:nth-child(3) { --reveal-delay: 240ms; }
+  &:nth-child(4) { --reveal-delay: 360ms; }
 
   &:hover,
   &:focus-within {
@@ -51,13 +56,25 @@
   &:hover {
     transform: translateY(-2px);
   }
+
+  &:hover .imageFrame :global(img) {
+    transform: scale(1.02);
+  }
 }
 
 .image {
-  width: 100%;
   aspect-ratio: 1.72;
   object-fit: cover;
   background: var(--color-surface-warm);
+}
+
+.imageFrame {
+  aspect-ratio: 1.72;
+  background: var(--color-surface-warm);
+
+  > :global(img) {
+    transition: opacity 260ms var(--ease-standard), transform var(--motion-base) var(--ease-standard);
+  }
 }
 
 .cardBody {
@@ -78,8 +95,8 @@
   p {
     margin-top: 0.5rem;
     color: var(--color-text-secondary);
-    font-size: 0.75rem;
-    line-height: 1.48;
+    font-size: 0.9rem;
+    line-height: 1.5;
   }
 }
 
@@ -104,7 +121,7 @@
   }
 
   &:hover .cardLink svg {
-    transform: translateX(2px);
+    transform: translateX(4px);
   }
 }
 
@@ -116,11 +133,11 @@
   padding-top: 0.55rem;
   color: var(--color-primary);
   font-family: var(--font-sans);
-  font-size: 0.72rem;
+  font-size: 0.9rem;
   font-weight: 600;
 
   svg {
-    transition: transform 160ms ease;
+  transition: transform var(--motion-fast) var(--ease-standard);
   }
 
 }
@@ -129,6 +146,11 @@
   .card,
   .cardLink svg {
     transition: none;
+  }
+
+  .imageFrame > :global(img) {
+    transition: none;
+    transform: none;
   }
 }
 
@@ -170,6 +192,10 @@
     aspect-ratio: 2.2;
   }
 
+  .imageFrame {
+    aspect-ratio: 2.2;
+  }
+
   .cardBody {
     min-height: 7.8rem;
     padding: 0.7rem 0.7rem 3.35rem;
@@ -178,8 +204,6 @@
       font-size: 0.98rem;
     }
 
-    p {
-      font-size: 0.69rem;
-    }
+    p { font-size: 0.9rem; }
   }
 }

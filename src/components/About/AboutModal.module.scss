@@ -75,7 +75,8 @@
 .introduction {
   max-width: 42rem;
   color: var(--color-text-secondary);
-  font-size: 0.92rem;
+  font-size: 1rem;
+  line-height: 1.55;
 }
 
 .directions {
@@ -91,13 +92,13 @@
   border-bottom: 1px solid var(--color-border);
 
   h3 {
-    font-size: 0.86rem;
+    font-size: 0.94rem;
     font-weight: 600;
   }
 
   p {
     color: var(--color-text-secondary);
-    font-size: 0.85rem;
+    font-size: 0.94rem;
   }
 }
 
@@ -109,14 +110,14 @@
   background: var(--color-surface-warm);
 
   h3 {
-    font-size: 0.86rem;
+    font-size: 0.94rem;
     font-weight: 600;
   }
 
   p {
     margin-top: 0.35rem;
     color: var(--color-text-secondary);
-    font-size: 0.85rem;
+    font-size: 0.94rem;
   }
 }
 
@@ -154,7 +155,7 @@
   .introduction,
   .direction p,
   .work p {
-    font-size: 0.82rem;
+    font-size: 0.94rem;
   }
 
   .direction {

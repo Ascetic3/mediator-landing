@@ -30,7 +30,7 @@
   border: 0;
   background: transparent;
   color: var(--color-text-primary);
-  font-size: 0.88rem;
+  font-size: 0.95rem;
   font-weight: 600;
   line-height: 1.45;
   text-align: left;
@@ -46,7 +46,7 @@
   svg {
     flex: 0 0 auto;
     color: var(--color-primary);
-    transition: transform 150ms ease;
+    transition: transform var(--motion-fast) var(--ease-standard);
   }
 
   > * {
@@ -61,16 +61,34 @@
 }
 
 .answer {
-  &[hidden] {
-    display: none;
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  visibility: hidden;
+  transition: grid-template-rows var(--motion-base) var(--ease-standard), opacity var(--motion-base) var(--ease-standard), visibility var(--motion-base) linear;
+
+  &.answerOpen {
+    grid-template-rows: 1fr;
+    opacity: 1;
+    visibility: visible;
   }
 
-  > p {
+  > .answerInner {
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  p {
     max-width: 44rem;
     padding: 0 2rem 1rem 0;
     color: var(--color-text-secondary);
-    font-size: 0.82rem;
+    font-size: 0.95rem;
+    line-height: 1.55;
   }
+}
+
+.list {
+  transition: opacity var(--motion-slow) var(--ease-out), transform var(--motion-slow) var(--ease-out);
 }
 
 @media (max-width: 700px) {
@@ -78,5 +96,13 @@
     grid-template-columns: 1fr;
     gap: 1.25rem;
     padding-block: 2.75rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .answer,
+  .question svg,
+  .list {
+    transition: none;
   }
 }

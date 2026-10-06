@@ -14,7 +14,7 @@ const currentYear = new Date().getFullYear()
 
 function Footer() {
   return (
-    <footer className={styles.footer}>
+    <footer className={styles.footer} data-motion="footer">
       <div className={`container ${styles.grid}`}>
         <div className={styles.identity}>
           <a className={styles.brand} href="#main-content" aria-label="Медиатор — наверх">

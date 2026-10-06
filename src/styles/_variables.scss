@@ -16,4 +16,10 @@
   --radius-control: 0.4rem;
   --section-spacing: clamp(3.5rem, 6vw, 5.75rem);
   --shadow-soft: 0 0.5rem 1.75rem rgb(47 34 29 / 7%);
+  --motion-fast: 260ms;
+  --motion-base: 600ms;
+  --motion-slow: 800ms;
+  --ease-standard: cubic-bezier(0.2, 0.7, 0.25, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --motion-stagger: 120ms;
 }

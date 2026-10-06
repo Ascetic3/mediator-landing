@@ -1,0 +1,511 @@
+{
+  "viewports": [
+    {
+      "name": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "scrollWidth": 1440,
+      "bodyFontSize": "16px",
+      "navDisplay": "flex",
+      "trust": {
+        "x": 61,
+        "y": 614,
+        "width": 1318,
+        "height": 137.140625,
+        "right": 1379,
+        "bottom": 751.140625
+      },
+      "compositionBottom": 752.140625,
+      "trustTop": 614,
+      "trustBottom": 751.140625,
+      "servicesTop": 772.140625,
+      "trustContainedByCreamHeroComposition": true,
+      "servicesBeginAfterCreamHeroComposition": true,
+      "trustColumns": "325.094px 325.109px 325.094px 325.109px",
+      "serviceColumns": "319.203px 319.203px 319.203px 319.219px",
+      "processColumns": "330px 330px 330px 330px",
+      "headerHomeMenuVisible": true,
+      "faqQuestionSize": "15.2px",
+      "footerLinkSize": "14px",
+      "horizontallyContained": true,
+      "pendingMotion": 0,
+      "visibleMotion": 28
+    },
+    {
+      "name": "wide-tablet",
+      "viewport": {
+        "width": 1024,
+        "height": 900
+      },
+      "scrollWidth": 1024,
+      "bodyFontSize": "16px",
+      "navDisplay": "flex",
+      "trust": {
+        "x": 44.015625,
+        "y": 496.4375,
+        "width": 935.96875,
+        "height": 198.6875,
+        "right": 979.984375,
+        "bottom": 695.125
+      },
+      "compositionBottom": 696.125,
+      "trustTop": 496.4375,
+      "trustBottom": 695.125,
+      "servicesTop": 716.125,
+      "trustContainedByCreamHeroComposition": true,
+      "servicesBeginAfterCreamHeroComposition": true,
+      "trustColumns": "229.594px 229.594px 229.594px 229.594px",
+      "serviceColumns": "223.688px 223.703px 223.703px 223.703px",
+      "processColumns": "234.484px 234.5px 234.484px 234.5px",
+      "headerHomeMenuVisible": true,
+      "faqQuestionSize": "15.2px",
+      "footerLinkSize": "14px",
+      "horizontallyContained": true,
+      "pendingMotion": 0,
+      "visibleMotion": 28
+    },
+    {
+      "name": "tablet",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "scrollWidth": 768,
+      "bodyFontSize": "16px",
+      "navDisplay": "none",
+      "trust": {
+        "x": 33.25,
+        "y": 516.59375,
+        "width": 701.484375,
+        "height": 239.53125,
+        "right": 734.734375,
+        "bottom": 756.125
+      },
+      "compositionBottom": 757.125,
+      "trustTop": 516.59375,
+      "trustBottom": 756.125,
+      "servicesTop": 777.125,
+      "trustContainedByCreamHeroComposition": true,
+      "servicesBeginAfterCreamHeroComposition": true,
+      "trustColumns": "341.938px 341.953px",
+      "serviceColumns": "344.547px 344.547px",
+      "processColumns": "351.734px 351.75px",
+      "headerHomeMenuVisible": true,
+      "faqQuestionSize": "15.2px",
+      "footerLinkSize": "14px",
+      "horizontallyContained": true,
+      "pendingMotion": 0,
+      "visibleMotion": 28
+    },
+    {
+      "name": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "scrollWidth": 390,
+      "bodyFontSize": "16px",
+      "navDisplay": "none",
+      "trust": {
+        "x": 21,
+        "y": 713.8125,
+        "width": 348,
+        "height": 435.09375,
+        "right": 369,
+        "bottom": 1148.90625
+      },
+      "compositionBottom": 1149.90625,
+      "trustTop": 713.8125,
+      "trustBottom": 1148.90625,
+      "servicesTop": 1169.90625,
+      "trustContainedByCreamHeroComposition": true,
+      "servicesBeginAfterCreamHeroComposition": true,
+      "trustColumns": "165.219px 165.219px",
+      "serviceColumns": "350px",
+      "processColumns": "350px",
+      "headerHomeMenuVisible": true,
+      "faqQuestionSize": "15.2px",
+      "footerLinkSize": "14px",
+      "horizontallyContained": true,
+      "pendingMotion": 0,
+      "visibleMotion": 28
+    }
+  ],
+  "header": {
+    "links": [
+      {
+        "text": "Главная",
+        "href": "#main-content",
+        "fontSize": "15.2px",
+        "box": {
+          "x": 758.234375,
+          "y": 22.328125,
+          "width": 61.28125,
+          "height": 23.5625,
+          "right": 819.515625
+        }
+      },
+      {
+        "text": "Услуги",
+        "href": "#services",
+        "fontSize": "15.2px",
+        "box": {
+          "x": 840.390625,
+          "y": 22.328125,
+          "width": 50.78125,
+          "height": 23.5625,
+          "right": 891.171875
+        }
+      },
+      {
+        "text": "Как мы работаем",
+        "href": "#process",
+        "fontSize": "15.2px",
+        "box": {
+          "x": 912.046875,
+          "y": 22.328125,
+          "width": 132.28125,
+          "height": 23.5625,
+          "right": 1044.328125
+        }
+      },
+      {
+        "text": "О нас",
+        "href": "#about",
+        "fontSize": "15.2px",
+        "box": {
+          "x": 1065.203125,
+          "y": 22.328125,
+          "width": 42.21875,
+          "height": 23.5625,
+          "right": 1107.421875
+        }
+      },
+      {
+        "text": "Вопросы",
+        "href": "#faq",
+        "fontSize": "15.2px",
+        "box": {
+          "x": 1128.296875,
+          "y": 22.328125,
+          "width": 67.125,
+          "height": 23.5625,
+          "right": 1195.421875
+        }
+      }
+    ],
+    "logoHref": "#main-content",
+    "logoMark": {
+      "x": 60,
+      "y": 13.703125,
+      "width": 40.796875,
+      "height": 40.796875,
+      "right": 100.796875
+    },
+    "wordmarkFontSize": "20px",
+    "cta": {
+      "fontSize": "15.2px",
+      "box": {
+        "x": 1216.296875,
+        "y": 11.3125,
+        "width": 163.703125,
+        "height": 45.59375,
+        "right": 1380
+      }
+    },
+    "normal": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 81,
+      "right": 1440
+    },
+    "compact": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 69.21875,
+      "right": 1440
+    },
+    "navFits": true,
+    "homeListed": true,
+    "homeLinkFound": true,
+    "mobileHomeVisible": true,
+    "mobileHomeReturnsToStart": true
+  },
+  "trust": {
+    "hero": {
+      "x": 61,
+      "y": 101.921875,
+      "width": 1318,
+      "height": 512,
+      "bottom": 613.921875
+    },
+    "heroGrid": {
+      "x": 61,
+      "y": 101.921875,
+      "width": 1318,
+      "height": 512,
+      "bottom": 613.921875
+    },
+    "card": {
+      "x": 61,
+      "y": 613.921875,
+      "width": 1318,
+      "height": 137.140625,
+      "bottom": 751.0625
+    },
+    "composition": {
+      "x": 60,
+      "y": 100.921875,
+      "width": 1320,
+      "height": 651.140625,
+      "bottom": 752.0625
+    },
+    "items": [
+      {
+        "x": 69.796875,
+        "y": 623.71875,
+        "width": 325.09375,
+        "height": 118.546875,
+        "bottom": 742.265625,
+        "title": "Работаем по закону",
+        "description": "Рассматриваем предусмотренные законом варианты решения.",
+        "titleSize": "15.04px",
+        "textSize": "14px"
+      },
+      {
+        "x": 394.890625,
+        "y": 623.71875,
+        "width": 325.109375,
+        "height": 118.546875,
+        "bottom": 742.265625,
+        "title": "Разбираемся в ситуации",
+        "description": "Оцениваем обстоятельства и помогаем выбрать подходящий сценарий.",
+        "titleSize": "15.04px",
+        "textSize": "14px"
+      },
+      {
+        "x": 720,
+        "y": 623.71875,
+        "width": 325.09375,
+        "height": 118.546875,
+        "bottom": 742.265625,
+        "title": "Сопровождаем процедуру",
+        "description": "Объясняем этапы и сопровождаем на протяжении работы.",
+        "titleSize": "15.04px",
+        "textSize": "14px"
+      },
+      {
+        "x": 1045.09375,
+        "y": 623.71875,
+        "width": 325.109375,
+        "height": 118.546875,
+        "bottom": 742.265625,
+        "title": "Остаёмся на связи",
+        "description": "Отвечаем на вопросы и объясняем, что происходит на каждом этапе.",
+        "titleSize": "15.04px",
+        "textSize": "14px"
+      }
+    ],
+    "cardContainedByCreamHeroComposition": true,
+    "servicesBeginAfterComposition": true,
+    "cardMaxWidthMatchesHero": true,
+    "noHardSeparators": true
+  },
+  "typography": {
+    "body": {
+      "selector": "body",
+      "fontSize": "16px",
+      "lineHeight": "24.8px"
+    },
+    "desktopNavigation": {
+      "selector": "#site-navigation a[href=\"#services\"]",
+      "fontSize": "15.2px",
+      "lineHeight": "23.56px"
+    },
+    "headerCta": {
+      "selector": "#site-navigation .button",
+      "fontSize": "15.2px",
+      "lineHeight": "18.24px"
+    },
+    "heroBody": {
+      "selector": "#hero-title + p",
+      "fontSize": "16px",
+      "lineHeight": "24.8px"
+    },
+    "serviceBody": {
+      "selector": "#services article p",
+      "fontSize": "14.4px",
+      "lineHeight": "21.6px"
+    },
+    "trustBody": {
+      "selector": "[aria-label=\"Принципы работы агентства\"] article p",
+      "fontSize": "14px",
+      "lineHeight": "21px"
+    },
+    "stepsBody": {
+      "selector": "#process li p",
+      "fontSize": "14px",
+      "lineHeight": "21px"
+    },
+    "aboutBody": {
+      "selector": "#about p:not(.eyebrow)",
+      "fontSize": "16px",
+      "lineHeight": "24.8px"
+    },
+    "leaderBody": {
+      "selector": "section[aria-labelledby=\"leader-title\"] > div > p:not(.eyebrow)",
+      "fontSize": "16px",
+      "lineHeight": "24.8px"
+    },
+    "leaderFact": {
+      "selector": "section[aria-labelledby=\"leader-title\"] li p",
+      "fontSize": "15.04px",
+      "lineHeight": "22.56px"
+    },
+    "faqQuestion": {
+      "selector": "#faq button",
+      "fontSize": "15.2px",
+      "lineHeight": "22.04px"
+    },
+    "faqAnswer": {
+      "selector": "#faq [role=\"region\"] p",
+      "fontSize": "15.2px",
+      "lineHeight": "23.56px"
+    },
+    "formLabel": {
+      "selector": "#contact label",
+      "fontSize": "14px",
+      "lineHeight": "21.7px"
+    },
+    "formInput": {
+      "selector": "#contact input",
+      "fontSize": "16px",
+      "lineHeight": "24.8px"
+    },
+    "consent": {
+      "selector": "#contact p:last-child",
+      "fontSize": "16px",
+      "lineHeight": "24.8px"
+    },
+    "footerLink": {
+      "selector": "footer nav a",
+      "fontSize": "14px",
+      "lineHeight": "20.3px"
+    },
+    "footerBottom": {
+      "selector": "footer > div:last-child",
+      "fontSize": "14px",
+      "lineHeight": "21.7px"
+    },
+    "button": {
+      "selector": "main .button",
+      "fontSize": "15.2px",
+      "lineHeight": "18.24px"
+    }
+  },
+  "motion": {
+    "scrollTargetStateAfterReveal": "visible",
+    "stateStaysVisibleOnReturn": true,
+    "heroAnimations": [
+      {
+        "animationName": "_hero-copy-reveal_124fz_1",
+        "duration": "0.8s",
+        "delay": "0s"
+      },
+      {
+        "animationName": "_hero-copy-reveal_124fz_1",
+        "duration": "0.8s",
+        "delay": "0.12s"
+      },
+      {
+        "animationName": "_hero-copy-reveal_124fz_1",
+        "duration": "0.8s",
+        "delay": "0.24s"
+      },
+      {
+        "animationName": "_hero-copy-reveal_124fz_1",
+        "duration": "0.8s",
+        "delay": "0.36s"
+      }
+    ],
+    "reducedMotion": {
+      "duration": "1e-05s",
+      "opacity": "1",
+      "transform": "none"
+    },
+    "reducedMotionScrollReveal": null
+  },
+  "selection": {
+    "paragraphUserSelect": "none",
+    "buttonUserSelect": "none",
+    "inputUserSelect": "text",
+    "inputValueAfterFill": "Editable input"
+  },
+  "fallback": {
+    "hero": {
+      "status": "fallback",
+      "fallbackMarkVisible": true,
+      "label": "Переговорное пространство с рабочим столом для консультаций",
+      "width": 659,
+      "height": 512
+    },
+    "service": {
+      "status": "fallback",
+      "fallbackMarkVisible": true,
+      "label": "Временное фото рабочего стола с документами и ноутбуком",
+      "width": 317.203125,
+      "height": 184.40625
+    },
+    "leader": {
+      "status": "fallback",
+      "fallbackMarkVisible": true,
+      "label": "Любовь Кузнецова",
+      "width": 555.453125,
+      "height": 603.75
+    }
+  },
+  "network": {
+    "reservedHeroFrameBeforeDecode": {
+      "width": 659,
+      "height": 512,
+      "status": "loaded"
+    },
+    "heroFrameAfterDecode": {
+      "width": 659,
+      "height": 512,
+      "status": "loaded"
+    }
+  },
+  "assets": [
+    {
+      "path": "/favicon.ico",
+      "status": 200,
+      "bytes": 2503
+    },
+    {
+      "path": "/favicon-16x16.png",
+      "status": 200,
+      "bytes": 756
+    },
+    {
+      "path": "/favicon-32x32.png",
+      "status": 200,
+      "bytes": 1694
+    },
+    {
+      "path": "/apple-touch-icon.png",
+      "status": 200,
+      "bytes": 19547
+    },
+    {
+      "path": "/site.webmanifest",
+      "status": 200,
+      "bytes": 401
+    }
+  ],
+  "browserErrors": []
+}
