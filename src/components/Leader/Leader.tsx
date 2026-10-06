@@ -1,24 +1,37 @@
-import leaderImage from '../../assets/images/hero-counselor-temp.webp'
 import styles from './Leader.module.scss'
+import CredentialsGallery from './CredentialsGallery'
+
+const confirmedFacts = [
+  'Повышение квалификации арбитражных управляющих — 2019 и 2021',
+  'Профильный семинар по изменениям законодательства — 2018',
+  'Участие в профессиональных и образовательных мероприятиях',
+]
 
 function Leader() {
   return (
     <section className={`container ${styles.section}`} aria-labelledby="leader-title">
       <figure className={styles.portrait}>
-        <img src={leaderImage} alt="Временный портрет; заменить на утверждённое фото Любови Кузнецовой" loading="lazy" />
-        <figcaption>Временное фото — заменить перед публикацией</figcaption>
+        <img
+          src="/legacy-assets/IMG_0816.jpeg"
+          alt="Любовь Кузнецова"
+          loading="lazy"
+        />
       </figure>
       <div className={styles.copy}>
-        <p className="eyebrow">Руководитель агентства</p>
+        <p className="eyebrow">Ведущий специалист агентства «Медиатор»</p>
         <h2 className="section-title" id="leader-title">Любовь Кузнецова</h2>
-        <p>
-          Команда «Медиатор» помогает разобраться в ситуации, оценить перспективы и пройти согласованные этапы процедуры.
+        <p className={styles.summary}>
+          Сопровождает сложные финансовые и банкротные вопросы. Регулярно проходит профильное повышение квалификации и участвует в профессиональных мероприятиях.
         </p>
-        <a className="button button--outline" href="#contact">Задать вопрос</a>
-      </div>
-      <div className={styles.note}>
-        <span aria-hidden="true">“</span>
-        <p>Сначала — внимательно разобраться в обстоятельствах. Затем — обсудить понятные и законные шаги.</p>
+        <ul className={styles.facts}>
+          {confirmedFacts.map((fact, index) => (
+            <li key={fact}>
+              <span aria-hidden="true">0{index + 1}</span>
+              <p>{fact}</p>
+            </li>
+          ))}
+        </ul>
+        <CredentialsGallery />
       </div>
     </section>
   )

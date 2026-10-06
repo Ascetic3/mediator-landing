@@ -1,0 +1,204 @@
+{
+  "viewports": [
+    {
+      "name": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "scrollWidth": 1440,
+      "section": {
+        "x": 60,
+        "y": 185.546875,
+        "width": 1320,
+        "height": 716.78125
+      },
+      "portrait": {
+        "x": 60,
+        "y": 271.9375,
+        "width": 555.453125,
+        "height": 544
+      },
+      "summary": {
+        "x": 673.046875,
+        "y": 438.25,
+        "width": 624,
+        "height": 68.4375
+      },
+      "facts": {
+        "x": 673.046875,
+        "y": 526.6875,
+        "width": 706.953125,
+        "height": 143.21875
+      },
+      "button": {
+        "x": 673.046875,
+        "y": 689.90625,
+        "width": 202.59375,
+        "height": 44.796875
+      },
+      "copy": {
+        "x": 673.046875,
+        "y": 353.15625,
+        "width": 706.953125,
+        "height": 381.546875
+      },
+      "image": {
+        "src": "http://127.0.0.1:5174/legacy-assets/IMG_0816.jpeg",
+        "complete": true,
+        "naturalWidth": 3072,
+        "naturalHeight": 4608,
+        "objectFit": "cover"
+      }
+    },
+    {
+      "name": "tablet",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "scrollWidth": 768,
+      "section": {
+        "x": 32.25,
+        "y": 417.140625,
+        "width": 703.484375,
+        "height": 558.25
+      },
+      "portrait": {
+        "x": 32.25,
+        "y": 522.453125,
+        "width": 298.96875,
+        "height": 347.625
+      },
+      "summary": {
+        "x": 355.21875,
+        "y": 543.03125,
+        "width": 380.515625,
+        "height": 91.25
+      },
+      "facts": {
+        "x": 355.21875,
+        "y": 654.28125,
+        "width": 380.515625,
+        "height": 200.3125
+      },
+      "button": {
+        "x": 355.21875,
+        "y": 874.59375,
+        "width": 202.59375,
+        "height": 44.796875
+      },
+      "copy": {
+        "x": 355.21875,
+        "y": 473.140625,
+        "width": 380.515625,
+        "height": 446.25
+      },
+      "image": {
+        "src": "http://127.0.0.1:5174/legacy-assets/IMG_0816.jpeg",
+        "complete": true,
+        "naturalWidth": 3072,
+        "naturalHeight": 4608,
+        "objectFit": "cover"
+      }
+    },
+    {
+      "name": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "scrollWidth": 390,
+      "section": {
+        "x": 20,
+        "y": 63.46875,
+        "width": 350,
+        "height": 804.21875
+      },
+      "portrait": {
+        "x": 20,
+        "y": 103.46875,
+        "width": 350,
+        "height": 291.65625
+      },
+      "summary": {
+        "x": 20,
+        "y": 480.09375,
+        "width": 350,
+        "height": 87.25
+      },
+      "facts": {
+        "x": 20,
+        "y": 581.734375,
+        "width": 350,
+        "height": 181.15625
+      },
+      "button": {
+        "x": 20,
+        "y": 782.890625,
+        "width": 202.59375,
+        "height": 44.796875
+      },
+      "copy": {
+        "x": 20,
+        "y": 415.125,
+        "width": 350,
+        "height": 412.5625
+      },
+      "image": {
+        "src": "http://127.0.0.1:5174/legacy-assets/IMG_0816.jpeg",
+        "complete": true,
+        "naturalWidth": 3072,
+        "naturalHeight": 4608,
+        "objectFit": "cover"
+      }
+    }
+  ],
+  "interactions": {
+    "open": {
+      "roleDialog": "true",
+      "bodyScrollLocked": true,
+      "rootInert": true,
+      "image": {
+        "width": 1247,
+        "height": 882,
+        "objectFit": "contain"
+      },
+      "imageCount": 6
+    },
+    "focusTrap": {
+      "shiftTabFromClose": "Следующий документ",
+      "tabFromLast": "Закрыть галерею документов"
+    },
+    "document2": {
+      "width": 1247,
+      "height": 882
+    },
+    "document3": {
+      "width": 2480,
+      "height": 3508
+    },
+    "document4": {
+      "width": 1680,
+      "height": 2376
+    },
+    "document5": {
+      "width": 1247,
+      "height": 881
+    },
+    "document6": {
+      "width": 2480,
+      "height": 3508
+    },
+    "arrowKeyWrap": true,
+    "escapeCloses": true,
+    "focusReturns": true,
+    "bodyScrollRestored": true,
+    "rootReactivated": true,
+    "overlayClickCloses": true
+  },
+  "consoleErrors": [
+    "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  ],
+  "pageErrors": []
+}

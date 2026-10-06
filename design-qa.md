@@ -38,4 +38,19 @@ No actionable P0/P1/P2 visual findings remain at the requested desktop, tablet, 
 - No page-level JavaScript errors were reported. One missing `/favicon.ico` request returned 404; all eight page images loaded successfully.
 - A first full-page mobile capture omitted the below-fold lazy office image. The capture was repeated after all images had loaded and decoded; the final `qa/mobile.png` contains the office image. No code or visual changes were made for this capture artifact.
 
+## Leader block and credentials gallery QA (2026-10-06)
+
+**Final result: passed** — no P0/P1/P2 findings remain in the updated leader block or credentials gallery.
+
+- Source visual truth for the leader block: [provided leader reference](C:\Users\986C~1\AppData\Local\Temp\codex-clipboard-8f0a7ad7-f325-4fb0-bb1d-9c2ac1b885e0.png), 934 × 573 px. Direct desktop comparison was captured at 934 × 573 CSS px; the focused component capture is [qa/leader-934-reference-viewport.png](qa/leader-934-reference-viewport.png). The page viewport capture is [qa/leader-934-viewport.png](qa/leader-934-viewport.png); the component is taller than the viewport and therefore the focused capture is the cleaner comparison.
+- Responsive focused captures: [qa/leader-desktop.png](qa/leader-desktop.png) at 1440 px, [qa/leader-tablet.png](qa/leader-tablet.png) at 768 px, and [qa/leader-mobile.png](qa/leader-mobile.png) at 390 px. All have matching document `scrollWidth` and viewport width.
+- Comparison covered layout, typography, colors/tokens, image crop/quality, and content hierarchy. The desktop two-column arrangement, portrait scale, heading and credentials rows align with the supplied block reference. Mobile orders the portrait, profile text, credentials and CTA vertically without clipping.
+- The gallery has no supplied modal screenshot reference. Its styling was reviewed against the existing palette and component, and interaction/fit were checked directly. [qa/credentials-desktop.png](qa/credentials-desktop.png), [qa/credentials-mobile.png](qa/credentials-mobile.png), and [qa/credentials-mobile-portrait.png](qa/credentials-mobile-portrait.png) capture the gallery. The tall third document fits inside the 390 × 844 viewport; the dialog bounds are x=8..382 and y≈101..743, with no horizontal page overflow.
+- Interaction checks passed: close button and overlay, Escape, focus placement/trap/return, body scroll lock/restore, inert background, previous/next navigation and wraparound. All six local credential images decoded. No page errors or failed HTTP responses were recorded in the latest mobile gallery check.
+
+## Follow-up status
+
+- The leader portrait is now the downloaded original at `/legacy-assets/IMG_0816.jpeg`; the earlier P3 to replace the temporary leader portrait is resolved. Other temporary page photography remains a separate future asset-replacement item.
+- Earlier full-page QA still records a 404 for `/favicon.ico`; this is outside the leader/gallery scope and does not affect rendering.
+
 final result: passed
