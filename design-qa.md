@@ -141,3 +141,13 @@ final result: passed
 final result: passed
 
 - **Follow-up visual polish:** following the supplied screenshot review, increased the gap between the final paragraph and the About button. Refreshed all three section captures and reran desktop/tablet/mobile layout, popup, close, focus-return, and form CTA checks; no P0/P1/P2 issues or horizontal overflow.
+
+## About agency section layout refinement QA (2026-10-07)
+
+**Result: passed** — no P0/P1/P2 findings in this focused section review.
+
+- Updated section screenshots: [desktop](qa/about-block-desktop.png), [tablet](qa/about-block-tablet.png), [mobile](qa/about-block-mobile.png). Browser viewports: 1440 × 1000, 768 × 1000, and 390 × 844 CSS px.
+- Measured section heights: 598 px desktop, 600 px tablet, 816 px mobile; previous captures were approximately 496 px, 506 px, and 657 px. The revised block is visibly taller at all widths while retaining the existing split image/copy composition.
+- Text column widened at desktop/tablet; image asset and copy remain unchanged. The three directions render as compact cream/terracotta text chips; mobile wraps them across two lines without crowding. The button remains prominent below them with a measured 28 px gap.
+- Horizontal overflow: none at all three widths. No page errors. Popup was not changed or included in this focused QA.
+- **P3:** none identified.

@@ -43,6 +43,9 @@ function About() {
           <p className="eyebrow">{aboutContent.eyebrow}</p>
           <h2 className="section-title" id="about-title">{aboutContent.title}</h2>
           {aboutContent.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+          <ul className={styles.directions} aria-label="Направления агентства">
+            {aboutContent.focusAreas.map((area) => <li key={area}>{area}</li>)}
+          </ul>
           <button
             ref={returnFocusRef}
             className="button button--outline"
