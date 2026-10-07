@@ -187,14 +187,25 @@
   .grid > .column:nth-child(3) { display: none; }
 
   .legalColumn {
-    display: none;
+    display: flex;
+    gap: 0.4rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid rgb(231 215 200 / 70%);
 
-    &:has(a) {
-      display: flex;
-      border-top: 1px solid rgb(231 215 200 / 70%);
+    h2 {
+      display: block;
+      margin-bottom: 0.1rem;
+      color: var(--color-text-muted);
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
     }
 
-    .unavailable { display: none; }
+    .unavailable {
+      display: block;
+      font-size: 0.9rem;
+      line-height: 1.45;
+    }
   }
 
   .bottom {

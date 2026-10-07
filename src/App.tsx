@@ -8,7 +8,6 @@ import Leader from './components/Leader/Leader'
 import FAQ from './components/FAQ/FAQ'
 import Contact from './components/Contact/Contact'
 import Footer from './components/Footer/Footer'
-import MobileInquiryCTA from './components/MobileInquiryCTA/MobileInquiryCTA'
 
 function App() {
   useEffect(() => {
@@ -57,7 +56,6 @@ function App() {
         <Contact />
       </main>
       <Footer />
-      <MobileInquiryCTA />
     </>
   )
 }

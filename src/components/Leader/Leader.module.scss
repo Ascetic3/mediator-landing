@@ -191,9 +191,9 @@
       border-radius: var(--radius-control);
 
       &[data-image-status='loaded'] > :global(img) {
-        object-position: 44% 35%;
-        transform: translate(10px, 0) scale(3.5);
-        transform-origin: 44% 38%;
+        object-position: 44% 25%;
+        transform: translate(10px, 4px) scale(4);
+        transform-origin: 44% 30%;
       }
     }
   }

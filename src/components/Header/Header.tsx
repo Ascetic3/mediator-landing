@@ -1,4 +1,5 @@
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
+import { createPortal } from 'react-dom'
 import { Menu, X } from 'lucide-react'
 import mediatorMark from '../../assets/brand/mediator-mark.png'
 import { headerNavigationLinks } from '../../data/navigation'
@@ -8,8 +9,13 @@ function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [isCompact, setIsCompact] = useState(false)
   const [activeLink, setActiveLink] = useState('')
+  const menuToggleRef = useRef<HTMLButtonElement>(null)
 
-  const closeMenu = () => setMenuOpen(false)
+  const closeMenu = useCallback(() => {
+    if (!menuOpen) return
+    setMenuOpen(false)
+    window.setTimeout(() => menuToggleRef.current?.focus(), 0)
+  }, [menuOpen])
 
   useEffect(() => {
     function updateCompact() {
@@ -31,7 +37,7 @@ function Header() {
 
     document.addEventListener('keydown', closeOnEscape)
     return () => document.removeEventListener('keydown', closeOnEscape)
-  }, [menuOpen])
+  }, [menuOpen, closeMenu])
 
   useEffect(() => {
     if (!('IntersectionObserver' in window)) return
@@ -50,6 +56,7 @@ function Header() {
   }, [])
 
   return (
+    <>
     <header className={`${styles.header} ${isCompact ? styles.compact : ''}`}>
       <div className={`container ${styles.inner}`}>
         <a className={styles.brand} href="#main-content" onClick={closeMenu} aria-label="Медиатор — главная">
@@ -72,6 +79,7 @@ function Header() {
         </nav>
 
         <button
+          ref={menuToggleRef}
           className={styles.menuToggle}
           type="button"
           aria-label={menuOpen ? 'Закрыть меню' : 'Открыть меню'}
@@ -83,6 +91,17 @@ function Header() {
         </button>
       </div>
     </header>
+    {menuOpen && createPortal(
+      <button
+        className={styles.menuBackdrop}
+        type="button"
+        tabIndex={-1}
+        aria-label="Закрыть меню"
+        onClick={closeMenu}
+      />,
+      document.body,
+    )}
+    </>
   )
 }
 

@@ -38,7 +38,7 @@ function Footer() {
           <h2>Документы</h2>
           {legalDocuments.map(({ label, href }) => href
             ? <a key={label} href={href}>{label}</a>
-            : <span className={styles.unavailable} key={label} aria-disabled="true">{label}</span>)}
+            : <span className={styles.unavailable} key={label} aria-disabled="true" title="Документ будет добавлен позже">{label}</span>)}
         </div>
       </div>
 

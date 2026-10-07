@@ -135,6 +135,10 @@
     min-height: 2.9rem;
   }
 
+  .form :global(.button) {
+    margin-top: 1rem;
+  }
+
   .consent {
     font-size: 0.875rem;
   }
