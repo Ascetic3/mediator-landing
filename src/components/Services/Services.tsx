@@ -1,5 +1,5 @@
-import { useRef, useState } from 'react'
-import { ArrowRight } from 'lucide-react'
+import { useRef, useState, type UIEvent } from 'react'
+import { ArrowLeft, ArrowRight } from 'lucide-react'
 import { services, type ServiceItem } from '../../data/siteContent'
 import { publicAsset, publicAssetSrcSet } from '../../utils/publicAssets'
 import SafeImage from '../SafeImage/SafeImage'
@@ -27,7 +27,24 @@ const serviceImages: Record<string, { src: string; srcSet: string }> = {
 
 function Services() {
   const [activeService, setActiveService] = useState<ServiceItem | null>(null)
+  const [activeIndex, setActiveIndex] = useState(0)
+  const railRef = useRef<HTMLDivElement | null>(null)
   const returnFocusRef = useRef<HTMLButtonElement | null>(null)
+
+  function handleRailScroll(event: UIEvent<HTMLDivElement>) {
+    const rail = event.currentTarget
+    const firstCard = rail.querySelector<HTMLElement>(`[class~="${styles.card}"]`)
+    if (!firstCard) return
+    const gap = Number.parseFloat(getComputedStyle(rail).columnGap) || 0
+    setActiveIndex(Math.min(services.length - 1, Math.max(0, Math.round(rail.scrollLeft / (firstCard.offsetWidth + gap)))))
+  }
+
+  function moveRail(direction: -1 | 1) {
+    const nextIndex = Math.min(services.length - 1, Math.max(0, activeIndex + direction))
+    const card = railRef.current?.querySelectorAll<HTMLElement>(`[class~="${styles.card}"]`)[nextIndex]
+    card?.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' })
+    setActiveIndex(nextIndex)
+  }
 
   function discussSituation() {
     setActiveService(null)
@@ -46,7 +63,7 @@ function Services() {
         </div>
         <a className={styles.allServices} href="#contact">Обсудить ситуацию <ArrowRight size={15} aria-hidden="true" /></a>
       </div>
-      <div className={styles.grid}>
+      <div className={styles.grid} ref={railRef} onScroll={handleRailScroll}>
         {services.map((service) => {
           const image = serviceImages[service.image]
 
@@ -85,6 +102,15 @@ function Services() {
             </article>
           )
         })}
+      </div>
+      <div className={styles.carouselControls} aria-label="Навигация по услугам">
+        <button type="button" aria-label="Предыдущая услуга" onClick={() => moveRail(-1)} disabled={activeIndex === 0}>
+          <ArrowLeft size={18} aria-hidden="true" />
+        </button>
+        <span aria-live="polite">{activeIndex + 1} / {services.length}</span>
+        <button type="button" aria-label="Следующая услуга" onClick={() => moveRail(1)} disabled={activeIndex === services.length - 1}>
+          <ArrowRight size={18} aria-hidden="true" />
+        </button>
       </div>
       <ServiceDetailsModal
         service={activeService}

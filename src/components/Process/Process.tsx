@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, ChevronRight, ClipboardCheck, FileText, MessageCircle, Scale } from 'lucide-react'
 import { processSteps } from '../../data/siteContent'
 import ProcessStepModal from './ProcessStepModal'
 import styles from './Process.module.scss'
@@ -30,16 +30,28 @@ function Process() {
                 className={styles.card}
                 type="button"
                 aria-haspopup="dialog"
-                aria-label={`Этап ${step.number}: ${step.title}. Подробнее`}
+                aria-label={`Этап ${step.number}: ${step.mobileTitle ?? step.title}. Подробнее`}
                 onClick={(event) => {
                   returnFocusRef.current = event.currentTarget
                   setActiveStep(step)
                 }}
               >
                 <span className={styles.number}>{step.number}</span>
-                <span className={styles.cardTitle}>{step.title}</span>
-                <span className={styles.description}>{step.description}</span>
-                <span className={styles.more}>Подробнее <ArrowRight size={15} aria-hidden="true" /></span>
+                <span className={styles.processIcon} aria-hidden="true">
+                  {step.number === '01' ? <MessageCircle /> : step.number === '02' ? <Scale /> : step.number === '03' ? <FileText /> : <ClipboardCheck />}
+                </span>
+                <span className={styles.cardTitle}>
+                  <span className={styles.desktopTitle}>{step.title}</span>
+                  <span className={styles.mobileTitle}>{step.mobileTitle ?? step.title}</span>
+                </span>
+                <span className={styles.description}>
+                  <span className={styles.desktopDescription}>{step.description}</span>
+                  <span className={styles.mobileDescription}>{step.mobileDescription ?? step.description}</span>
+                </span>
+                <span className={styles.more} aria-hidden="true">
+                  <span className={styles.moreDesktop}>Подробнее <ArrowRight size={15} /></span>
+                  <span className={styles.moreMobile}><ChevronRight size={20} /></span>
+                </span>
               </button>
             </li>
           ))}

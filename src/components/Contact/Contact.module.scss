@@ -117,9 +117,25 @@
 }
 
 @media (max-width: 700px) {
+  .section {
+    padding-block: 2rem;
+  }
+
   .layout {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
-    padding: 1.25rem;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .formNotice:empty {
+    display: none;
+  }
+
+  .form input {
+    min-height: 2.9rem;
+  }
+
+  .consent {
+    font-size: 0.875rem;
   }
 }

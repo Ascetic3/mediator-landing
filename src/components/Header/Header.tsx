@@ -71,10 +71,6 @@ function Header() {
           </a>
         </nav>
 
-        <a className={`button ${styles.mobileCta}`} href="#contact" onClick={closeMenu}>
-          Оставить заявку
-        </a>
-
         <button
           className={styles.menuToggle}
           type="button"

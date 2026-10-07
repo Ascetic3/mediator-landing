@@ -158,14 +158,12 @@
   }
 
   .navCta {
-    display: none;
-  }
-
-  .mobileCta {
     display: inline-flex;
-    min-height: 2.65rem;
-    padding-inline: 0.65rem;
-    font-size: 0.875rem;
+    width: 100%;
+    min-height: 3rem;
+    justify-content: center;
+    margin-top: 0.9rem;
+    font-size: 0.95rem;
     white-space: nowrap;
   }
 
@@ -177,9 +175,6 @@
     display: flex;
   }
 
-  .navCta {
-    margin-top: 0.9rem;
-  }
 }
 
 @media (max-width: 420px) {
@@ -196,10 +191,6 @@
     display: none;
   }
 
-  .mobileCta {
-    padding-inline: 0.55rem;
-    font-size: 0.85rem;
-  }
 }
 
 @media (max-width: 360px) {
@@ -211,10 +202,36 @@
     display: none;
   }
 
-  .mobileCta {
-    padding-inline: 0.5rem;
-    font-size: 0.82rem;
+}
+
+@media (max-width: 520px) {
+  .inner {
+    min-height: 4rem;
   }
+
+  .brandCaption {
+    display: none;
+  }
+
+  .brandName {
+    font-size: 0.95rem;
+    letter-spacing: 0.16em;
+  }
+
+  .brand {
+    min-height: 2.75rem;
+  }
+
+  .compact .inner {
+    min-height: 4rem;
+  }
+
+  .menuToggle {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+
+  .navCta { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {

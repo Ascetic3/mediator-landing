@@ -198,6 +198,34 @@ html.has-motion [data-motion='footer'] { --motion-distance: 0px; }
   }
 }
 
+@media (max-width: 520px) {
+  :root {
+    --space-mobile-section: 2.25rem;
+    --space-mobile-content: 1rem;
+    --space-mobile-card: 0.75rem;
+    --space-mobile-small: 0.45rem;
+    --motion-base: 520ms;
+    --motion-slow: 680ms;
+    --motion-stagger: 80ms;
+  }
+
+  html {
+    scroll-padding-block-start: 4.2rem;
+  }
+
+  [id] {
+    scroll-margin-block-start: 4.2rem;
+  }
+
+  .heroComposition {
+    margin-block: 0 1.1rem;
+    overflow: visible;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

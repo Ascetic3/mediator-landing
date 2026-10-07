@@ -26,10 +26,14 @@ function Leader() {
         />
       </figure>
       <div className={styles.copy} data-motion="leader-copy">
-        <p className="eyebrow">Ведущий специалист агентства «Медиатор»</p>
+        <p className="eyebrow">
+          <span className={styles.fullRole}>Ведущий специалист агентства «Медиатор»</span>
+          <span className={styles.mobileRole}>Ведущий специалист</span>
+        </p>
         <h2 className="section-title" id="leader-title">Любовь Кузнецова</h2>
         <p className={styles.summary}>
-          Сопровождает сложные финансовые и банкротные вопросы. Регулярно проходит профильное повышение квалификации и участвует в профессиональных мероприятиях.
+          <span className={styles.fullSummary}>Сопровождает сложные финансовые и банкротные вопросы. Регулярно проходит профильное повышение квалификации и участвует в профессиональных мероприятиях.</span>
+          <span className={styles.mobileSummary}>Сопровождает сложные финансовые и банкротные вопросы.</span>
         </p>
         <ul className={styles.facts}>
           {confirmedFacts.map((fact, index) => (

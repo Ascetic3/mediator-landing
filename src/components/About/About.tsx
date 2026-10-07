@@ -44,7 +44,12 @@ function About() {
         <div className={styles.copy} data-motion="about-copy">
           <p className="eyebrow">{aboutContent.eyebrow}</p>
           <h2 className="section-title" id="about-title">{aboutContent.title}</h2>
-          {aboutContent.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+          {aboutContent.paragraphs.map((paragraph, index) => (
+            <p className={index === 0 ? styles.primaryParagraph : styles.secondaryParagraph} key={paragraph}>
+              {paragraph}
+            </p>
+          ))}
+          <p className={styles.directionLabel}>Направления</p>
           <ul className={styles.directions} aria-label="Направления агентства">
             {aboutContent.focusAreas.map((area) => <li key={area} data-motion="about-marker">{area}</li>)}
           </ul>

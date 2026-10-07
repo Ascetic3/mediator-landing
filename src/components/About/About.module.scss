@@ -94,6 +94,8 @@
   &:nth-child(3) { --reveal-delay: 240ms; }
 }
 
+.directionLabel { display: none; }
+
 @media (min-width: 701px) and (max-width: 850px) {
   .copy {
     padding: 1.75rem;
@@ -117,6 +119,94 @@
   .imageWrap .imageFrame {
     min-height: 14rem;
     max-height: 17rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .section {
+    padding-block: 1.35rem;
+  }
+
+  .layout {
+    min-height: 0;
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+
+  .copy {
+    display: contents;
+
+    > .eyebrow {
+      grid-row: 1;
+      margin: 1.15rem 1.1rem 0;
+      font-size: 0.7rem;
+    }
+
+    h2 {
+      grid-row: 2;
+      margin: 0.45rem 1.1rem 0;
+      font-size: clamp(1.8rem, 7.5vw, 2.05rem);
+      line-height: 1.08;
+    }
+
+    p:not(.eyebrow):not(.directionLabel) {
+      display: none;
+    }
+
+    .directionLabel {
+      display: block;
+      grid-row: 4;
+      margin: 0.75rem 1.1rem 0;
+      color: var(--color-text-muted);
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      line-height: 1.35;
+      text-transform: uppercase;
+    }
+
+    .directions {
+      display: grid;
+      grid-row: 5;
+      grid-template-columns: 1fr;
+      gap: 0.35rem;
+      margin: 0.45rem 1.1rem 0;
+      padding: 0;
+      list-style: none;
+
+      li {
+        min-height: 0;
+        padding: 0.12rem 0 0.12rem 0.65rem;
+        border: 0;
+        border-left: 1px solid var(--color-primary);
+        border-radius: 0;
+        background: transparent;
+        font-size: 0.9rem;
+        line-height: 1.35;
+      }
+    }
+
+    :global(.button--tertiary) {
+      min-height: 2.75rem;
+      padding-block: 0.45rem;
+      grid-row: 6;
+      justify-self: start;
+      margin: 0.75rem 1.1rem 1.1rem;
+      font-size: 0.95rem;
+    }
+  }
+
+  .imageWrap {
+    min-height: 0;
+    max-height: none;
+    aspect-ratio: 1.7;
+    grid-row: 3;
+    margin: 0.85rem 1.1rem 0;
+
+    .imageFrame {
+      min-height: 0;
+      max-height: none;
+    }
   }
 }
 

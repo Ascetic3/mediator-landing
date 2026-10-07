@@ -1,4 +1,4 @@
-import { ArrowUpRight } from 'lucide-react'
+import { ArrowUp, ArrowUpRight } from 'lucide-react'
 import mediatorMark from '../../assets/brand/mediator-mark.png'
 import { navigationLinks } from '../../data/navigation'
 import { legalUrls } from '../../config/legal'
@@ -14,7 +14,7 @@ const currentYear = new Date().getFullYear()
 
 function Footer() {
   return (
-    <footer className={styles.footer} data-motion="footer">
+    <footer className={styles.footer} id="site-footer" data-motion="footer">
       <div className={`container ${styles.grid}`}>
         <div className={styles.identity}>
           <a className={styles.brand} href="#main-content" aria-label="Медиатор — наверх">
@@ -24,7 +24,7 @@ function Footer() {
           <p>Агентство правовой помощи</p>
         </div>
 
-        <nav className={styles.column} aria-label="Навигация в подвале">
+        <nav className={`${styles.column} ${styles.navigation}`} aria-label="Навигация в подвале">
           <h2>Навигация</h2>
           {navigationLinks.map((link) => <a key={link.href} href={link.href}>{link.label}</a>)}
         </nav>
@@ -34,7 +34,7 @@ function Footer() {
           <a href="#contact">Форма консультации</a>
         </div>
 
-        <div className={styles.column}>
+        <div className={`${styles.column} ${styles.legalColumn}`}>
           <h2>Документы</h2>
           {legalDocuments.map(({ label, href }) => href
             ? <a key={label} href={href}>{label}</a>
@@ -46,7 +46,9 @@ function Footer() {
         <span>© «Медиатор», {currentYear}</span>
         <span className={styles.disclaimer}>Информация на сайте не является гарантией результата.</span>
         <a className={styles.topLink} href="#main-content">
-          Наверх <ArrowUpRight size={15} aria-hidden="true" />
+          Наверх
+          <span className={styles.topArrowDesktop}><ArrowUpRight size={15} aria-hidden="true" /></span>
+          <span className={styles.topArrowMobile}><ArrowUp size={15} aria-hidden="true" /></span>
         </a>
       </div>
     </footer>

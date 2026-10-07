@@ -142,6 +142,43 @@
   }
 }
 
+@media (max-width: 520px) {
+  .copy {
+    padding: 1.25rem var(--container-gutter) 1.05rem;
+
+    h1 {
+      max-width: 15ch;
+      margin-top: 0.55rem;
+      font-size: clamp(2.05rem, 8vw, 2.3rem);
+      line-height: 1.02;
+    }
+  }
+
+  .description {
+    margin-top: 0.65rem;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .actions {
+    gap: 0.5rem;
+    margin-top: 0.85rem;
+
+    .button {
+      min-height: 2.9rem;
+      font-size: 0.95rem;
+    }
+  }
+
+  .imageWrap {
+    height: clamp(12.25rem, 55vw, 14.5rem);
+
+    [data-image-status='loaded'] .heroImage {
+      object-position: 64% 47%;
+    }
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .copy > [data-hero-reveal],
   .imageWrap .heroImage {
