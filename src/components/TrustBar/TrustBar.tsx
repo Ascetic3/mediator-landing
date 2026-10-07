@@ -9,13 +9,13 @@ function TrustBar() {
           <article className={styles.item} key={title} data-motion="trust-item">
             <span className={styles.icon}><Icon size={22} strokeWidth={1.6} aria-hidden="true" /></span>
             <div>
-              <h2>
+              <p className={styles.title}>
                 <span className={styles.fullTitle}>{title}</span>
                 <span className={styles.mobileTitle}>
                   {title === 'Работаем по закону' ? 'Закон' : title === 'Разбираемся в ситуации' ? 'Разбор ситуации' : title === 'Сопровождаем процедуру' ? 'Сопровождение' : 'На связи'}
                 </span>
-              </h2>
-              <p>{description}</p>
+              </p>
+              <p className={styles.description}>{description}</p>
             </div>
           </article>
         ))}

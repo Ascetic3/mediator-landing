@@ -5,9 +5,7 @@ import styles from './FAQ.module.scss'
 
 function FAQ() {
   const idPrefix = useId()
-  const [openIndex, setOpenIndex] = useState<number | null>(() => (
-    window.matchMedia('(max-width: 520px)').matches ? null : 0
-  ))
+  const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   return (
     <section className={styles.section} id="faq" aria-labelledby="faq-title">

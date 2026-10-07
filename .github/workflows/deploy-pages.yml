@@ -33,6 +33,7 @@ jobs:
         run: npm run build
         env:
           VITE_DEPLOY_BASE: /mediator-landing/
+          VITE_ALLOW_INDEXING: "false"
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
       - name: Upload Pages artifact

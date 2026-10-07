@@ -1,4 +1,4 @@
-import { useState, type ImgHTMLAttributes } from 'react'
+import { useEffect, useRef, useState, type ImgHTMLAttributes } from 'react'
 import mediatorMark from '../../assets/brand/mediator-mark.png'
 import styles from './SafeImage.module.scss'
 
@@ -10,8 +10,17 @@ type SafeImageProps = Omit<ImgHTMLAttributes<HTMLImageElement>, 'className' | 'o
 function SafeImage({ className, frameClassName, alt, src, ...imageProps }: SafeImageProps) {
   const [failedSource, setFailedSource] = useState<string | null>(null)
   const [loadedSource, setLoadedSource] = useState<string | null>(null)
+  const imageRef = useRef<HTMLImageElement>(null)
   const hasFailed = failedSource === src
   const isLoaded = loadedSource === src
+
+  useEffect(() => {
+    const image = imageRef.current
+
+    if (image?.complete && image.naturalWidth > 0) {
+      setLoadedSource(src ? String(src) : null)
+    }
+  }, [src])
 
   return (
     <span
@@ -28,6 +37,7 @@ function SafeImage({ className, frameClassName, alt, src, ...imageProps }: SafeI
       ) : (
         <img
           {...imageProps}
+          ref={imageRef}
           className={`${styles.image} ${className ?? ''} ${isLoaded ? styles.loaded : ''}`}
           src={src}
           alt={alt}
