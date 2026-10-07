@@ -21,7 +21,7 @@ function FAQ() {
             const answerId = `${idPrefix}-answer-${index}`
 
             return (
-              <div className={styles.item} key={item.question}>
+              <div className={`${styles.item} ${isOpen ? styles.itemOpen : ''}`} key={item.question}>
                 <button
                   className={styles.question}
                   id={questionId}

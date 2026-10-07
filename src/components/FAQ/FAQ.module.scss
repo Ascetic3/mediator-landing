@@ -60,7 +60,7 @@
   }
 }
 
-.item:has(.question[aria-expanded='true']) .question svg {
+.itemOpen .question svg {
   transform: rotate(180deg);
 }
 
