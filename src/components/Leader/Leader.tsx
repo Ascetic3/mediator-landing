@@ -1,7 +1,102 @@
+import { useEffect, useRef } from 'react'
 import styles from './Leader.module.scss'
 import CredentialsGallery from './CredentialsGallery'
 import SafeImage from '../SafeImage/SafeImage'
 import { publicAsset, publicAssetSrcSet } from '../../utils/publicAssets'
+import { credentialDocuments } from '../../data/credentials'
+
+function useCredentialPrefetch() {
+  const sectionRef = useRef<HTMLElement>(null)
+
+  useEffect(() => {
+    if (typeof window === 'undefined' || typeof IntersectionObserver === 'undefined') return
+
+    const connection = (navigator as Navigator & {
+      connection?: { saveData?: boolean; effectiveType?: string }
+    }).connection
+
+    if (connection?.saveData || ['slow-2g', '2g'].includes(connection?.effectiveType ?? '')) return
+
+    const section = sectionRef.current
+    if (!section) return
+
+    const idleWindow = window as Window & {
+      requestIdleCallback?: (callback: IdleRequestCallback, options?: IdleRequestOptions) => number
+      cancelIdleCallback?: (handle: number) => void
+    }
+
+    let cancelled = false
+    let observer: IntersectionObserver | undefined
+    let idleHandle: number | undefined
+    let timeoutHandle: number | undefined
+    let documentIndex = 0
+
+    function scheduleIdle(callback: () => void) {
+      if (cancelled) return
+
+      if (idleWindow.requestIdleCallback) {
+        idleHandle = idleWindow.requestIdleCallback(() => {
+          idleHandle = undefined
+          if (!cancelled) callback()
+        }, { timeout: 2000 })
+        return
+      }
+
+      timeoutHandle = window.setTimeout(() => {
+        timeoutHandle = undefined
+        if (!cancelled) callback()
+      }, 250)
+    }
+
+    function prefetchNextDocument() {
+      if (cancelled || documentIndex >= credentialDocuments.length) return
+
+      const image = new Image()
+      image.decoding = 'async'
+      image.fetchPriority = 'low'
+      image.onload = image.onerror = () => {
+        documentIndex += 1
+        scheduleIdle(prefetchNextDocument)
+      }
+      image.src = publicAsset(credentialDocuments[documentIndex])
+    }
+
+    function observeLeader() {
+      if (cancelled) return
+
+      observer = new IntersectionObserver((entries) => {
+        if (!entries.some((entry) => entry.isIntersecting)) return
+
+        observer?.disconnect()
+        observer = undefined
+        scheduleIdle(prefetchNextDocument)
+      }, { rootMargin: '125% 0px 125% 0px' })
+
+      observer.observe(section as HTMLElement)
+    }
+
+    function afterInitialLoad() {
+      window.removeEventListener('load', afterInitialLoad)
+      scheduleIdle(observeLeader)
+    }
+
+    if (document.readyState === 'complete') {
+      scheduleIdle(observeLeader)
+    } else {
+      window.addEventListener('load', afterInitialLoad, { once: true })
+    }
+
+    return () => {
+      cancelled = true
+      window.removeEventListener('load', afterInitialLoad)
+      observer?.disconnect()
+      if (idleHandle !== undefined) idleWindow.cancelIdleCallback?.(idleHandle)
+      if (timeoutHandle !== undefined) window.clearTimeout(timeoutHandle)
+    }
+  }, [])
+
+  return sectionRef
+}
 
 const confirmedFacts = [
   'Повышение квалификации арбитражных управляющих — 2019 и 2021',
@@ -10,8 +105,10 @@ const confirmedFacts = [
 ]
 
 function Leader() {
+  const leaderSectionRef = useCredentialPrefetch()
+
   return (
-    <section className={`container ${styles.section}`} aria-labelledby="leader-title">
+    <section ref={leaderSectionRef} className={`container ${styles.section}`} aria-labelledby="leader-title">
       <figure className={styles.portrait} data-motion="leader-portrait">
         <SafeImage
           frameClassName={styles.portraitImage}
