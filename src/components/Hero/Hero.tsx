@@ -1,4 +1,5 @@
 import { ArrowRight } from 'lucide-react'
+import { publicAsset, publicAssetSrcSet } from '../../utils/publicAssets'
 import SafeImage from '../SafeImage/SafeImage'
 import styles from './Hero.module.scss'
 
@@ -21,8 +22,8 @@ function Hero() {
         </div>
         <figure className={styles.imageWrap}>
           <SafeImage
-            src="/images/hero-consultation-960.webp"
-            srcSet="/images/hero-consultation-480.webp 480w, /images/hero-consultation-768.webp 768w, /images/hero-consultation-960.webp 960w, /images/hero-consultation-1280.webp 1280w"
+            src={publicAsset('images/hero-consultation-960.webp')}
+            srcSet={publicAssetSrcSet('images/hero-consultation-480.webp 480w, images/hero-consultation-768.webp 768w, images/hero-consultation-960.webp 960w, images/hero-consultation-1280.webp 1280w')}
             sizes="(max-width: 700px) 100vw, (max-width: 1320px) 50vw, 660px"
             width={1448}
             height={1086}

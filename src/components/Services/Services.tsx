@@ -1,26 +1,27 @@
 import { useRef, useState } from 'react'
 import { ArrowRight } from 'lucide-react'
 import { services, type ServiceItem } from '../../data/siteContent'
+import { publicAsset, publicAssetSrcSet } from '../../utils/publicAssets'
 import SafeImage from '../SafeImage/SafeImage'
 import ServiceDetailsModal from './ServiceDetailsModal'
 import styles from './Services.module.scss'
 
 const serviceImages: Record<string, { src: string; srcSet: string }> = {
   'service-procedure-temp.webp': {
-    src: '/images/service-procedure-640.webp',
-    srcSet: '/images/service-procedure-360.webp 360w, /images/service-procedure-640.webp 640w, /images/service-procedure-960.webp 960w, /images/service-procedure-1280.webp 1280w',
+    src: 'images/service-procedure-640.webp',
+    srcSet: 'images/service-procedure-360.webp 360w, images/service-procedure-640.webp 640w, images/service-procedure-960.webp 960w, images/service-procedure-1280.webp 1280w',
   },
   'service-managers-temp.webp': {
-    src: '/images/service-managers-640.webp',
-    srcSet: '/images/service-managers-360.webp 360w, /images/service-managers-640.webp 640w, /images/service-managers-960.webp 960w, /images/service-managers-1280.webp 1280w',
+    src: 'images/service-managers-640.webp',
+    srcSet: 'images/service-managers-360.webp 360w, images/service-managers-640.webp 640w, images/service-managers-960.webp 960w, images/service-managers-1280.webp 1280w',
   },
   'service-settlement-temp.webp': {
-    src: '/images/service-settlement-640.webp',
-    srcSet: '/images/service-settlement-360.webp 360w, /images/service-settlement-640.webp 640w, /images/service-settlement-960.webp 960w, /images/service-settlement-1280.webp 1280w',
+    src: 'images/service-settlement-640.webp',
+    srcSet: 'images/service-settlement-360.webp 360w, images/service-settlement-640.webp 640w, images/service-settlement-960.webp 960w, images/service-settlement-1280.webp 1280w',
   },
   'service-installments-temp.webp': {
-    src: '/images/service-installments-640.webp',
-    srcSet: '/images/service-installments-360.webp 360w, /images/service-installments-640.webp 640w, /images/service-installments-960.webp 960w, /images/service-installments-1280.webp 1280w',
+    src: 'images/service-installments-640.webp',
+    srcSet: 'images/service-installments-360.webp 360w, images/service-installments-640.webp 640w, images/service-installments-960.webp 960w, images/service-installments-1280.webp 1280w',
   },
 }
 
@@ -53,8 +54,8 @@ function Services() {
             <article className={styles.card} key={service.title} data-motion="service-card">
               <SafeImage
                 className={styles.image}
-                src={image.src}
-                srcSet={image.srcSet}
+                src={publicAsset(image.src)}
+                srcSet={publicAssetSrcSet(image.srcSet)}
                 sizes="(max-width: 520px) calc(100vw - 2.5rem), (max-width: 900px) calc(50vw - 2.5rem), (max-width: 1400px) calc((100vw - 5rem) / 4), 320px"
                 width={1448}
                 height={1086}

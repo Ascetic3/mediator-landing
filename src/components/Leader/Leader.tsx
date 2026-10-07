@@ -1,6 +1,7 @@
 import styles from './Leader.module.scss'
 import CredentialsGallery from './CredentialsGallery'
 import SafeImage from '../SafeImage/SafeImage'
+import { publicAsset, publicAssetSrcSet } from '../../utils/publicAssets'
 
 const confirmedFacts = [
   'Повышение квалификации арбитражных управляющих — 2019 и 2021',
@@ -14,8 +15,8 @@ function Leader() {
       <figure className={styles.portrait} data-motion="leader-portrait">
         <SafeImage
           frameClassName={styles.portraitImage}
-          src="/images/leader-portrait-768.webp"
-          srcSet="/images/leader-portrait-480.webp 480w, /images/leader-portrait-768.webp 768w, /images/leader-portrait-960.webp 960w, /images/leader-portrait-1280.webp 1280w"
+          src={publicAsset('images/leader-portrait-768.webp')}
+          srcSet={publicAssetSrcSet('images/leader-portrait-480.webp 480w, images/leader-portrait-768.webp 768w, images/leader-portrait-960.webp 960w, images/leader-portrait-1280.webp 1280w')}
           sizes="(max-width: 600px) calc(100vw - 2.5rem), (max-width: 900px) 40vw, 44vw"
           width={3072}
           height={4608}

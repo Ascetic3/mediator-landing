@@ -1,6 +1,7 @@
 import { useCallback, useRef, useState } from 'react'
 import { ArrowRight } from 'lucide-react'
 import { aboutContent } from '../../data/siteContent'
+import { publicAsset, publicAssetSrcSet } from '../../utils/publicAssets'
 import SafeImage from '../SafeImage/SafeImage'
 import AboutModal from './AboutModal'
 import styles from './About.module.scss'
@@ -59,8 +60,8 @@ function About() {
         <figure className={styles.imageWrap} data-motion="about-image">
           <SafeImage
             frameClassName={styles.imageFrame}
-            src="/images/office-interior-960.webp"
-            srcSet="/images/office-interior-480.webp 480w, /images/office-interior-768.webp 768w, /images/office-interior-960.webp 960w, /images/office-interior-1280.webp 1280w, /images/office-interior-1440.webp 1440w"
+            src={publicAsset('images/office-interior-960.webp')}
+            srcSet={publicAssetSrcSet('images/office-interior-480.webp 480w, images/office-interior-768.webp 768w, images/office-interior-960.webp 960w, images/office-interior-1280.webp 1280w, images/office-interior-1440.webp 1440w')}
             sizes="(max-width: 700px) 100vw, (max-width: 1320px) 50vw, 660px"
             width={1672}
             height={941}

@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { ChevronLeft, ChevronRight, X } from 'lucide-react'
 import { credentialDocuments } from '../../data/credentials'
+import { publicAsset } from '../../utils/publicAssets'
 import styles from './CredentialsGallery.module.scss'
 
 function CredentialsGallery() {
@@ -134,7 +135,7 @@ function CredentialsGallery() {
             <div className={styles.documentFrame}>
               <img
                 className={styles.document}
-                src={credentialDocuments[activeIndex]}
+                src={publicAsset(credentialDocuments[activeIndex])}
                 alt={`Документ ${activeIndex + 1}`}
               />
             </div>
